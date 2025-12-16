@@ -10,16 +10,16 @@ const DesktopScreen = () => {
         <Image
           src="/images/wallpaper.jpg"
           alt="Desktop Background"
-          fill
-          loading="lazy"
           className="h-full w-full object-cover"
+          width={100}
+          height={100}
           unoptimized
         />
         {/* Navbar */}
         <DesktopNavbar />
 
         {/* Animated Text Area */}
-        <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-[51.6%] text-center text-white font-bold">
+        <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 text-center text-white font-bold">
           <DesktopText />
         </div>
       </div>

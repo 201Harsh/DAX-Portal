@@ -25,7 +25,7 @@ const RenderText = (
 };
 
 const FONT_WEIGHTS: any = {
-  subtitle: { min: 100, max: 400, default: 100 },
+  subtitle: { min: 100, max: 500, default: 100 },
   title: { min: 400, max: 900, default: 400 },
 };
 
@@ -35,7 +35,7 @@ const setupTextHover = (container: any, type: any) => {
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
-  const animatedText = (letter: any, weight: any, duration: any = 0.32) => {
+  const animatedText = (letter: any, weight: any, duration: any = 0.25) => {
     return gsap.to(letter, {
       "--wght": weight,
       duration,
@@ -50,7 +50,7 @@ const setupTextHover = (container: any, type: any) => {
     letters.forEach((letter: any) => {
       const { left: l, width: w } = letter.getBoundingClientRect();
       const distance = Math.abs(mouseX - (l - left + w / 2));
-      const intensity = Math.exp(-(distance ** 2) / 2000);
+      const intensity = Math.exp(-(distance ** 2) / 10000);
 
       animatedText(letter, min + (max - min) * intensity);
     });
@@ -78,17 +78,17 @@ const DesktopText = () => {
   return (
     <div
       id="text-animation-desktop"
-      className="cursor-default select-none pointer-events-auto"
+      className="cursor-default select-none pointer-events-auto whitespace-nowrap "
     >
       <p ref={SubTitleRef}>
         {" "}
         {RenderText(
           "Hello! , I'm Harsh Pandey, a Full Stack Web Developer.",
-          "text-[24px] font-ligh tracking-tight"
+          "text-[25px] tracking-wider"
         )}
       </p>
       <h1 ref={TitleRef}>
-        {RenderText("portfolio.", "text-9xl italic mt-7 font-thin")}
+        {RenderText("portfolio.", "text-9xl italic mt-7 font-thin -tracking-noramal")}
       </h1>
     </div>
   );
