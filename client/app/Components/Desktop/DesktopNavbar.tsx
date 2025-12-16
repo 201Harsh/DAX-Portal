@@ -22,7 +22,7 @@ const DesktopNavbar = () => {
             ))}
           </div>
         </div>
-        <div className="flex items-center gap-4 text-white font-bold">
+        <div className="lg:flex hidden items-center gap-4 text-white font-bold">
           🌐 DAX PORTAL
         </div>
         <div className="flex items-center gap-5 text-white">
