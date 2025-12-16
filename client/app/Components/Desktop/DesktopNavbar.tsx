@@ -1,6 +1,6 @@
 "use client";
 import { FaWindows } from "react-icons/fa6";
-import { FiSearch, FiUser, FiWifi } from "react-icons/fi";
+import { FiSearch, FiWifi } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
 
 const DesktopNavbar = () => {
