@@ -47,6 +47,14 @@ const DesktopDock = () => {
   const DockRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    gsap.from(".main-dock", {
+      y: 20,
+      opacity: 0,
+      duration: 1.2,
+      ease: "back.out(1.7)",
+      delay: 1,
+    });
+
     const dock: any = DockRef.current;
 
     if (!dock) return;
@@ -99,7 +107,7 @@ const DesktopDock = () => {
 
   return (
     <>
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-3xl bg-gray-400/40 backdrop-blur-sm p-2">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-3xl bg-gray-400/40 backdrop-blur-sm p-2 main-dock">
         <div ref={DockRef} className="flex items-center justify-center gap-2">
           {dockApps.map(({ id, name, icon, canOpen }) => (
             <button

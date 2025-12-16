@@ -71,6 +71,22 @@ const DesktopText = () => {
   const SubTitleRef = useRef(null);
 
   useGSAP(() => {
+    gsap.from(TitleRef.current, {
+      x: 20,
+      opacity: 0,
+      duration: 0.8,
+      ease: "back.out(1.5)",
+      delay: 0.8,
+    });
+    gsap.from(SubTitleRef.current, {
+      x: -20,
+      scale: 0,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power1.out",
+      delay: 0.4,
+    });
+
     setupTextHover(TitleRef.current, "title");
     setupTextHover(SubTitleRef.current, "subtitle");
   }, []);
