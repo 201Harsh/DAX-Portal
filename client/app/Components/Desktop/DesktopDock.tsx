@@ -8,37 +8,49 @@ const DesktopDock = () => {
   const dockApps = [
     {
       id: "finder",
-      name: "Portfolio", // was "Finder"
+      name: "Portfolio",
       icon: "finder.png",
       canOpen: true,
     },
     {
       id: "safari",
-      name: "Browser", // was "Safari"
+      name: "Browser",
       icon: "safari.png",
       canOpen: true,
     },
     {
       id: "photos",
-      name: "Gallery", // was "Photos"
+      name: "Gallery",
       icon: "photos.png",
       canOpen: true,
     },
     {
       id: "contact",
-      name: "Contact", // or "Get in touch"
+      name: "Contact",
       icon: "contact.png",
       canOpen: true,
     },
     {
+      id: "spotify",
+      name: "Spotify",
+      icon: "spotify.png",
+      canOpen: true,
+    },
+    {
       id: "terminal",
-      name: "Skills", // was "Terminal"
+      name: "Skills",
       icon: "terminal.png",
       canOpen: true,
     },
     {
+      id: "vsCode",
+      name: "VS Code",
+      icon: "vscode.png",
+      canOpen: true,
+    },
+    {
       id: "trash",
-      name: "Trash Bin", // was "Trash"
+      name: "Trash Bin",
       icon: "trash.png",
       canOpen: false,
     },

@@ -7,7 +7,7 @@ import DesktopDock from "./DesktopDock";
 const DesktopScreen = () => {
   return (
     <>
-      <div className="max-h-screen w-full overflow-hidden">
+      <div className="h-screen w-full overflow-hidden">
         <Image
           src="/images/wallpaper.jpg"
           alt="Desktop Background"

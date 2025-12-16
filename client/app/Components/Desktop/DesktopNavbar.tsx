@@ -18,7 +18,7 @@ const DesktopNavbar = () => {
     });
 
     tl.from("#DeskLeftNavItems", {
-      y: -20,
+      x: 20,
       opacity: 0,
       duration: 0.2,
       ease: "power2.out",
@@ -26,7 +26,7 @@ const DesktopNavbar = () => {
     });
 
     tl.from("#DeskRightNavItems", {
-      y: -20,
+      x: -20,
       opacity: 0,
       duration: 0.2,
       ease: "power2.out",
@@ -69,7 +69,7 @@ const DesktopNavbar = () => {
               className="cursor-pointer w-4 h-4 outline-none"
               data-tooltip-id="navItems-tooltip"
               data-tooltip-content={name}
-              id="DeskLeftNavItems"
+              id="DeskRightNavItems"
             />
           ))}
           <div
