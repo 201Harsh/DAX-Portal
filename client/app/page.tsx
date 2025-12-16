@@ -1,4 +1,4 @@
-import Desktop from "./Components/Desktop";
+import Desktop from "./Components/Desktop/Desktop";
 
 const page = () => {
   return (

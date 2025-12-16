@@ -1,16 +1,15 @@
 import Image from "next/image";
 
-const Desktop = () => {
+const DesktopScreen = () => {
   return (
     <>
       <div className="h-screen w-full overflow-hidden">
         <Image
-          src="/images/wallpapermain.png"
+          src="/images/WallpaperMain.png"
           alt="Desktop Background"
           layout="fill"
           loading="lazy"
-          objectFit="cover"
-          className="h-full w-full object-cover"
+          className="h-full w-full xl:object-cover"
           unoptimized
         />
       </div>
@@ -18,4 +17,4 @@ const Desktop = () => {
   );
 };
 
-export default Desktop;
+export default DesktopScreen;
