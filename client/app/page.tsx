@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Desktop from "./Components/Desktop/Desktop";
+import Mobile from "./Components/Mobile/Mobile";
 
 const page = () => {
   const [IsMobile, setIsMobile] = useState<boolean>(false);
@@ -18,9 +19,9 @@ const page = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [IsMobile]);
+  }, []);
 
-  return <>{!IsMobile && <Desktop />}</>;
+  return <>{!IsMobile ? <Desktop /> : <Mobile />}</>;
 };
 
 export default page;
