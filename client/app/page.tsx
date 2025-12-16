@@ -1,5 +1,11 @@
+import Desktop from "./Components/Desktop";
+
 const page = () => {
-  return <div>page</div>;
+  return (
+    <>
+      <Desktop />
+    </>
+  );
 };
 
 export default page;
