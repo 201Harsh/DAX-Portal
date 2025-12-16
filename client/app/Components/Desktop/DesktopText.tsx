@@ -84,12 +84,11 @@ const DesktopText = () => {
         {" "}
         {RenderText(
           "Hello! , I'm Harsh Pandey, a Full Stack Web Developer.",
-          "text-[25px] tracking-wider"
+          "text-[25px] tracking-wider",
+          100
         )}
       </p>
-      <h1 ref={TitleRef}>
-        {RenderText("portfolio.", "text-9xl italic mt-7 font-thin -tracking-noramal")}
-      </h1>
+      <h1 ref={TitleRef}>{RenderText("portfolio.", "text-9xl italic mt-7")}</h1>
     </div>
   );
 };

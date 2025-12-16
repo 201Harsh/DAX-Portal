@@ -11,7 +11,7 @@ const DesktopDock = () => {
     },
     {
       id: "safari",
-      name: "Articles", // was "Safari"
+      name: "Browser", // was "Safari"
       icon: "safari.png",
       canOpen: true,
     },
@@ -35,7 +35,7 @@ const DesktopDock = () => {
     },
     {
       id: "trash",
-      name: "Archive", // was "Trash"
+      name: "Trash Bin", // was "Trash"
       icon: "trash.png",
       canOpen: false,
     },
@@ -60,7 +60,7 @@ const DesktopDock = () => {
                 className="h-full w-full"
                 width={100}
                 height={100}
-                unoptimized
+                loading="lazy"
               />
             </div>
           ))}
