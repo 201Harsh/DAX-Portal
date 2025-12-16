@@ -1,3 +1,4 @@
+"use client";
 import DesktopScreen from "./DesktopScreen";
 
 const Desktop = () => {
