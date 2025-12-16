@@ -62,7 +62,7 @@ const DesktopNavbar = () => {
           </div>
         </div>
       </div>
-      <Tooltip id="navItems-tooltip" place="bottom" />
+      <Tooltip id="navItems-tooltip" place="bottom" className="tooltip" delayShow={150} />
     </div>
   );
 };
