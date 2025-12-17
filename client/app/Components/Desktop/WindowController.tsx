@@ -26,7 +26,6 @@ const WindowController = ({ windowKey }: { windowKey: string }) => {
       </div>
 
       <div
-        onClick={() => toggleMaximizeWindow(windowKey)}
         className="group cursor-pointer p-1 rounded hover:bg-sky-600 transition-colors"
         title={isMaximized ? "Restore" : "Maximize"}
       >
