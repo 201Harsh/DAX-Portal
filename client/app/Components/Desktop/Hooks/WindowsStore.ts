@@ -5,21 +5,83 @@ interface WindowConfig {
   isOpen: boolean;
   zIndex: number;
   data: any;
+  position: { x: number; y: number };
+  size: { w: number; h: number };
 }
 
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG: { [key: string]: WindowConfig } = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  vscode: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  spotify: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  contact: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  resume: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  safari: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  photos: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  terminal: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  txtfile: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  imgfile: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  vscode: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
+  spotify: {
+    isOpen: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+    position: { x: 100, y: 100 },
+    size: { w: 600, h: 500 },
+  },
 };
 
 const useWindowsStore = create(

@@ -3,6 +3,7 @@ import Image from "next/image";
 import DesktopNavbar from "./DesktopNavbar";
 import DesktopText from "./DesktopText";
 import DesktopDock from "./DesktopDock";
+import { Terminal } from "./windows";
 
 const DesktopScreen = () => {
   return (
@@ -11,7 +12,7 @@ const DesktopScreen = () => {
         <Image
           src="/images/wallpaper.jpg"
           alt="Desktop Background"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover absolute top-0 left-0 -z-10"
           width={100}
           height={100}
           priority
@@ -27,6 +28,9 @@ const DesktopScreen = () => {
 
         {/* Dock */}
         <DesktopDock />
+
+        {/* Windows Stuff */}
+        <Terminal />
       </div>
     </>
   );
