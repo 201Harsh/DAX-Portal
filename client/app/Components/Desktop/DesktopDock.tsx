@@ -117,17 +117,25 @@ const DesktopDock = () => {
     };
   }, []);
 
+  const toogleApp = (app: any) => {
+    console.log(app);
+  };
+
   return (
     <>
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-3xl bg-gray-400/40 backdrop-blur-sm p-2 main-dock">
         <div ref={DockRef} className="flex items-center justify-center gap-2">
           {dockApps.map(({ id, name, icon, canOpen }) => (
             <button
+              onClick={() => toogleApp({ id, canOpen })}
+              disabled={!canOpen}
               data-tooltip-id="dock-tooltip"
               data-tooltip-content={name}
               key={id}
               className={`h-20 w-20 rounded-2xl flex items-center justify-center cursor-pointer dock-icon ${
-                canOpen ? "hover:bg-gray-900/40" : "cursor-not-allowed"
+                canOpen
+                  ? "hover:bg-gray-900/40"
+                  : "cursor-not-allowed opacity-55"
               }`}
             >
               <Image
