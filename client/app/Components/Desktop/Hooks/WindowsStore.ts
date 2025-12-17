@@ -1,9 +1,15 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
+interface WindowConfig {
+  isOpen: boolean;
+  zIndex: number;
+  data: any;
+}
+
 const INITIAL_Z_INDEX = 1000;
 
-const WINDOW_CONFIG = {
+const WINDOW_CONFIG: { [key: string]: WindowConfig } = {
   finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
@@ -12,6 +18,8 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  vscode: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  spotify: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 const useWindowsStore = create(
@@ -22,6 +30,7 @@ const useWindowsStore = create(
     openWindow: (windowKey: string, data: any = null) =>
       set((state: any) => {
         const win = state.windows[windowKey];
+        if (!win) return;
         win.isOpen = true;
         win.zIndex = state.nextZIndex;
         win.data = data ?? win.data;
@@ -31,6 +40,7 @@ const useWindowsStore = create(
     closeWindow: (windowKey: string) =>
       set((state: any) => {
         const win = state.windows[windowKey];
+        if (!win) return;
         win.isOpen = false;
         win.zIndex = INITIAL_Z_INDEX;
         win.data = null;
@@ -43,3 +53,5 @@ const useWindowsStore = create(
       }),
   }))
 );
+
+export default useWindowsStore;
