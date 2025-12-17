@@ -36,7 +36,7 @@ const DesktopNavbar = () => {
 
   return (
     <div
-      className="w-full absolute top-0 z-60 bg-gray-900/40 backdrop-blur-md border-b border-gray-700 font-semibold py-4 px-12"
+      className="w-full bg-gray-900/40 backdrop-blur-md border-b border-gray-700 font-semibold py-4 px-12"
       id="DeskNav"
     >
       <div className="h-full w-full flex justify-between items-center pt-2">
