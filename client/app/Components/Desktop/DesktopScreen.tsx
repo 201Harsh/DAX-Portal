@@ -14,6 +14,7 @@ const DesktopScreen = () => {
           className="h-full w-full object-cover"
           width={100}
           height={100}
+          priority
           unoptimized
         />
         {/* Navbar */}

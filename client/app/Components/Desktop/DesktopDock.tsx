@@ -151,7 +151,7 @@ const DesktopDock = () => {
               data-tooltip-id="dock-tooltip"
               data-tooltip-content={name}
               key={id}
-              className={`h-20 w-20 rounded-2xl flex items-center justify-center cursor-pointer dock-icon ${
+              className={`h-18.5 w-18.5 rounded-2xl flex items-center justify-center cursor-pointer dock-icon ${
                 canOpen
                   ? ""
                   : "cursor-not-allowed opacity-55"
