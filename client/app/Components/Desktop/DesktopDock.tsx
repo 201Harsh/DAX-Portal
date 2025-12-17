@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { Tooltip } from "react-tooltip";
 import { gsap } from "gsap";
+import useWindowsStore from "./Hooks/WindowsStore";
 
 const DesktopDock = () => {
   const dockApps = [
@@ -43,7 +44,7 @@ const DesktopDock = () => {
       canOpen: true,
     },
     {
-      id: "vsCode",
+      id: "vscode",
       name: "VS Code",
       icon: "vscode.png",
       canOpen: true,
@@ -55,6 +56,8 @@ const DesktopDock = () => {
       canOpen: false,
     },
   ];
+
+  const { windows, openWindow, closeWindow } = useWindowsStore();
 
   const DockRef = useRef<HTMLDivElement>(null);
 
@@ -117,13 +120,29 @@ const DesktopDock = () => {
     };
   }, []);
 
-  const toogleApp = (app: any) => {
-    console.log(app);
+  const toogleApp = (app: { id: string; canOpen: boolean }) => {
+    if (!app.canOpen) return;
+
+    const window = windows[app.id];
+
+    if (!window) {
+      console.log("Window Not Found!");
+      return;
+    }
+
+    if (window.isOpen) {
+      closeWindow(app.id);
+    } else {
+      openWindow(app.id);
+    }
+
+    console.log(windows)
+
   };
 
   return (
     <>
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-3xl bg-gray-400/40 backdrop-blur-sm p-2 main-dock">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-3xl bg-gray-300/20 backdrop-blur-sm p-2 main-dock">
         <div ref={DockRef} className="flex items-center justify-center gap-2">
           {dockApps.map(({ id, name, icon, canOpen }) => (
             <button
@@ -134,7 +153,7 @@ const DesktopDock = () => {
               key={id}
               className={`h-20 w-20 rounded-2xl flex items-center justify-center cursor-pointer dock-icon ${
                 canOpen
-                  ? "hover:bg-gray-900/40"
+                  ? ""
                   : "cursor-not-allowed opacity-55"
               }`}
             >
