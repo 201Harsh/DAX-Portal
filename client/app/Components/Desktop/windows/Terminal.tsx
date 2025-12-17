@@ -13,7 +13,7 @@ const Terminal = () => {
   ];
 
   return (
-    <div className="bg-[#1e1e1e] text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700">
+    <div className="bg-[#1e1e1eaf] backdrop-blur-md text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700">
       <div className="flex items-center justify-between px-4 py-2 bg-[#2d2d2d] border-b border-black select-none">
         <div className="flex items-center gap-2 opacity-80">
           <span className="text-blue-400">⚡</span>
