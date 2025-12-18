@@ -2,6 +2,8 @@ import WindowWrapper from "../Hooks/HOC/WindowWrapper";
 import { SiTicktick } from "react-icons/si";
 import { FiFlag } from "react-icons/fi";
 import WindowController from "../WindowController";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Terminal = () => {
   const techStack = [
@@ -12,74 +14,88 @@ const Terminal = () => {
     { category: "AI Integration", stack: "Google Gemini API, MCP Servers" },
   ];
 
+  useGSAP(() => {
+    gsap.to("#animate-terminal", {
+      y: 100,
+      opacity: 1,
+      duration: 0.5,
+      ease: "circ.out",
+      delay: 0.4,
+    });
+  }, []);
+
   return (
-    <div className="bg-[#1e1e1ec5] backdrop-blur-sm text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700">
-      <div className="flex items-center justify-between px-4 py-2 bg-[#2d2d2d] border-b border-black select-none">
-        <div className="flex items-center gap-2 opacity-80">
-          <span className="text-blue-400">⚡</span>
-          <span className="font-semibold text-xs tracking-wide">
-            dax@tech-stack:~
-          </span>
+    <>
+      <div
+        id="animate-terminal"
+        className="bg-[#1e1e1ec5] opacity-0 backdrop-blur-sm text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700"
+      >
+        <div className="flex items-center justify-between px-4 py-2 bg-[#2d2d2d] border-b border-black select-none">
+          <div className="flex items-center gap-2 opacity-80">
+            <span className="text-blue-400">⚡</span>
+            <span className="font-semibold text-xs tracking-wide">
+              dax@tech-stack:~
+            </span>
+          </div>
+
+          <WindowController windowKey="terminal" />
         </div>
 
-        <WindowController windowKey="terminal" />
-      </div>
-
-      <div className="p-6 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
-        <div className="flex flex-wrap items-center gap-2 mb-6">
-          <span className="text-green-400 font-bold">➜</span>
-          <span className="text-cyan-400 font-bold">~</span>
-          <span className="opacity-90">neofetch --tech-stack</span>
-        </div>
-
-        <div className="flex flex-col gap-1">
-          <div className="grid grid-cols-12 gap-4 border-b border-gray-600 pb-2 mb-2 text-gray-300 font-bold uppercase tracking-wider text-xs">
-            <div className="col-span-3">Category</div>
-            <div className="col-span-9">Technologies</div>
-          </div>
-
-          {techStack.map((item, index) => (
-            <div
-              key={index}
-              className="grid grid-cols-12 gap-4 py-1 hover:bg-white/5 transition-colors rounded px-1 -mx-1 font-semibold"
-            >
-              <div className="col-span-3 text-emerald-400 font-semibold">
-                {item.category}
-              </div>
-              <div className="col-span-9 text-gray-300">{item.stack}</div>
-            </div>
-          ))}
-
-          <div className="flex items-center gap-2 mt-6">
-            <span className="text-green-400 font-bold">
-              <SiTicktick />
-            </span>
-            <span className="text-cyan-400 font-bold">
-              5 out 5 Tech Stack Loaded
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 mt-6">
-            <span className="text-green-500 font-bold">
-              <FiFlag />
-            </span>
-            <span className="text-green-500 font-semibold font-poppins">
-              Rendered in 0.837ms
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 mt-6">
+        <div className="p-6 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
+          <div className="flex flex-wrap items-center gap-2 mb-6">
             <span className="text-green-400 font-bold">➜</span>
-            <span className="text-cyan-400 font-bold">dax@root~</span>
-            <span className="animate-pulse bg-gray-400 h-5 w-2.5 inline-block align-middle"></span>
+            <span className="text-cyan-400 font-bold">~</span>
+            <span className="opacity-90">neofetch --tech-stack</span>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <div className="grid grid-cols-12 gap-4 border-b border-gray-600 pb-2 mb-2 text-gray-300 font-bold uppercase tracking-wider text-xs">
+              <div className="col-span-3">Category</div>
+              <div className="col-span-9">Technologies</div>
+            </div>
+
+            {techStack.map((item, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-12 gap-4 py-1 hover:bg-white/5 transition-colors rounded px-1 -mx-1 font-semibold"
+              >
+                <div className="col-span-3 text-emerald-400 font-semibold">
+                  {item.category}
+                </div>
+                <div className="col-span-9 text-gray-300">{item.stack}</div>
+              </div>
+            ))}
+
+            <div className="flex items-center gap-2 mt-6">
+              <span className="text-green-400 font-bold">
+                <SiTicktick />
+              </span>
+              <span className="text-cyan-400 font-bold">
+                5 out 5 Tech Stack Loaded
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2 mt-6">
+              <span className="text-green-500 font-bold">
+                <FiFlag />
+              </span>
+              <span className="text-green-500 font-semibold font-poppins">
+                Rendered in 0.837ms
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2 mt-6">
+              <span className="text-green-400 font-bold">➜</span>
+              <span className="text-cyan-400 font-bold">dax@root~</span>
+              <span className="animate-pulse bg-gray-400 h-5 w-2.5 inline-block align-middle"></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-// Ensure this matches your HOC signature
 const TerminalWindow = WindowWrapper(Terminal, "terminal");
 
 export default TerminalWindow;

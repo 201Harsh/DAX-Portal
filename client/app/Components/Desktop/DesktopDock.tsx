@@ -53,7 +53,7 @@ const DesktopDock = () => {
       id: "trash",
       name: "Trash Bin",
       icon: "trash.png",
-      canOpen: false,
+      canOpen: true,
     },
   ];
 

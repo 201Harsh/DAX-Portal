@@ -1,7 +1,8 @@
 "use client";
-import { Draggable } from "gsap/Draggable";
+
 import gsap from "gsap";
 import DesktopScreen from "./DesktopScreen";
+import { Draggable } from "gsap/all";
 gsap.registerPlugin(Draggable);
 
 

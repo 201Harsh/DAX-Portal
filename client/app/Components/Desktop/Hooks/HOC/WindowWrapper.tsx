@@ -1,8 +1,9 @@
+"use client";
 import { useLayoutEffect, useRef } from "react";
 import useWindowsStore from "../WindowsStore";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Draggable } from "gsap/Draggable";
+import { Draggable } from "gsap/all";
 
 const WindowWrapper = (Componet: any, windowKey: string) => {
   const Wrapped = (props: any) => {
