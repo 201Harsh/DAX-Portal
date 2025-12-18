@@ -1,14 +1,11 @@
 import {
-  VscChromeMaximize,
   VscChromeClose,
   VscChromeMinimize,
-  VscChromeRestore,
 } from "react-icons/vsc";
 import useWindowsStore from "./Hooks/WindowsStore";
 
 const WindowController = ({ windowKey }: { windowKey: string }) => {
-  const { closeWindow, toggleMaximizeWindow, windows } = useWindowsStore();
-  const isMaximized = windows[windowKey]?.isMaximized;
+  const { closeWindow } = useWindowsStore();
 
   return (
     <div className="flex items-center gap-2">
@@ -23,23 +20,6 @@ const WindowController = ({ windowKey }: { windowKey: string }) => {
           className="text-gray-400 group-hover:text-white"
           size={18}
         />
-      </div>
-
-      <div
-        className="group cursor-pointer p-1 rounded hover:bg-sky-600 transition-colors"
-        title={isMaximized ? "Restore" : "Maximize"}
-      >
-        {isMaximized ? (
-          <VscChromeRestore
-            className="text-gray-400 group-hover:text-white"
-            size={18}
-          />
-        ) : (
-          <VscChromeMaximize
-            className="text-gray-400 group-hover:text-white"
-            size={18}
-          />
-        )}
       </div>
 
       <div

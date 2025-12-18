@@ -14,8 +14,8 @@ const DesktopDock = () => {
       canOpen: true,
     },
     {
-      id: "safari",
-      name: "Browser",
+      id: "browser",
+      name: "About Me",
       icon: "safari.png",
       canOpen: true,
     },

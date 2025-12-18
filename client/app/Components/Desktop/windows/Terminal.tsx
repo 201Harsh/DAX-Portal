@@ -7,7 +7,7 @@ import gsap from "gsap";
 
 const Terminal = () => {
   const techStack = [
-    { category: "Core", stack: "MERN Stack (MongoDB, Express, React, Node)" },
+    { category: "Core", stack: "Full Stack Web Development" },
     { category: "Frameworks", stack: "Next.js, Three.js" },
     { category: "Styling", stack: "Tailwind CSS, GSAP, Framer Motion" },
     { category: "Tools", stack: "Git, GitHub, Vercel, Postman" },
@@ -28,7 +28,7 @@ const Terminal = () => {
     <>
       <div
         id="animate-terminal"
-        className="bg-[#1e1e1ec5] opacity-0 backdrop-blur-sm text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700"
+        className="bg-[#1e1e1ea9] opacity-0 backdrop-blur-lg text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700"
       >
         <div className="flex items-center justify-between px-4 py-2 bg-[#2d2d2d] border-b border-black select-none">
           <div className="flex items-center gap-2 opacity-80">
