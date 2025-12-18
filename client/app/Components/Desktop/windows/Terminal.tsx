@@ -70,7 +70,7 @@ const Terminal = () => {
 
           <div className="flex items-center gap-2 mt-6">
             <span className="text-green-400 font-bold">➜</span>
-            <span className="text-cyan-400 font-bold">~</span>
+            <span className="text-cyan-400 font-bold">dax@root~</span>
             <span className="animate-pulse bg-gray-400 h-5 w-2.5 inline-block align-middle"></span>
           </div>
         </div>
