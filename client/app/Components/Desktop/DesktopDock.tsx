@@ -22,7 +22,7 @@ const DesktopDock = () => {
     {
       id: "photos",
       name: "Gallery",
-      icon: "photos.png",
+      icon: "gallery.png",
       canOpen: true,
     },
     {
@@ -32,15 +32,9 @@ const DesktopDock = () => {
       canOpen: true,
     },
     {
-      id: "spotify",
-      name: "Spotify",
-      icon: "spotify.png",
-      canOpen: true,
-    },
-    {
       id: "terminal",
       name: "Skills",
-      icon: "terminal.png",
+      icon: "dterminal.png",
       canOpen: true,
     },
     {
