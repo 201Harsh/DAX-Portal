@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Draggable } from "gsap/all";
 
 const RenderText = (
   text: string,
@@ -86,6 +87,8 @@ const DesktopText = () => {
       ease: "power1.out",
       delay: 0.4,
     });
+
+    Draggable.create("#text-animation-desktop", { onPress: () => {} });
 
     setupTextHover(TitleRef.current, "title");
     setupTextHover(SubTitleRef.current, "subtitle");
