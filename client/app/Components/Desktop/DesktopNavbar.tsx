@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { FaWindows } from "react-icons/fa6";
 import { FiSearch, FiUser, FiWifi } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
+import useWindowsStore from "./Hooks/WindowsStore";
 
 const DesktopNavbar = () => {
   useGSAP(() => {
@@ -34,6 +35,14 @@ const DesktopNavbar = () => {
     });
   }, []);
 
+  const navbarItems = [
+    { id: "about", name: "About" },
+    { id: "contact", name: "Contact" },
+    { id: "resume", name: "Resume" },
+  ];
+
+  const { openWindow } = useWindowsStore();
+
   return (
     <div
       className="w-full bg-gray-900/40 backdrop-blur-md border-b border-gray-700 font-semibold py-4 px-12"
@@ -44,15 +53,16 @@ const DesktopNavbar = () => {
           <FiUser className="h-4 w-4" />
           Harsh's portfolio
           <div className="flex items-center justify-center gap-4 ml-5">
-            {["Projects", "About", "Contact"].map((item) => (
+            {navbarItems.map((item) => (
               <button
-                key={item}
+                onClick={() => openWindow(item.id)}
+                key={item.id}
                 data-tooltip-id="navItems-tooltip"
-                data-tooltip-content={item}
+                data-tooltip-content={item.name}
                 className="cursor-pointer underline-offset-2 hover:underline"
                 id="DeskLeftNavItems"
               >
-                {item}
+                {item.name}
               </button>
             ))}
           </div>
