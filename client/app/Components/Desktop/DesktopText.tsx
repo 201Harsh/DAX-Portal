@@ -99,7 +99,7 @@ const DesktopText = () => {
       <p ref={SubTitleRef}>
         {" "}
         {RenderText(
-          "Hello! , I'm Harsh Pandey, a Full Stack Web Developer.",
+          "Hello! , I'm Harsh Pandey, and welcome to",
           "text-[26px] tracking-wide",
           100
         )}
