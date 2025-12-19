@@ -36,7 +36,7 @@ const DesktopNavbar = () => {
   }, []);
 
   const navbarItems = [
-    { id: "about", name: "About" },
+    { id: "browser", name: "About" },
     { id: "contact", name: "Contact" },
     { id: "resume", name: "Resume" },
   ];
@@ -45,7 +45,7 @@ const DesktopNavbar = () => {
 
   return (
     <div
-      className="w-full bg-gray-900/40 backdrop-blur-md border-b border-gray-700 font-semibold py-4 px-12"
+      className="w-full bg-black/60 backdrop-blur-xl border-b border-gray-700 font-semibold py-2 px-12"
       id="DeskNav"
     >
       <div className="h-full w-full flex justify-between items-center pt-2">
