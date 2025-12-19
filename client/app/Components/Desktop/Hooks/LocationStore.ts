@@ -269,7 +269,7 @@ const TRASH_LOCATION: any = {
   ],
 };
 
-const locations: any = {
+export const locations: any = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,
