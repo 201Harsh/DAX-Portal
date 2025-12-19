@@ -28,9 +28,9 @@ const Terminal = () => {
     <>
       <div
         id="animate-terminal"
-        className="bg-[#1e1e1ea9] opacity-0 backdrop-blur-lg text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700"
+        className="bg-[#181818] opacity-0 backdrop-blur-lg text-gray-300 w-full h-full rounded-lg font-mono text-sm shadow-xl flex flex-col overflow-hidden border border-gray-700"
       >
-        <div className="flex items-center justify-between px-4 py-2 bg-[#2d2d2d] border-b border-black select-none">
+        <div className="flex items-center justify-between px-4 py-2 bg-[#1a1a1a] border-b border-gray-600 select-none">
           <div className="flex items-center gap-2 opacity-80">
             <span className="text-blue-400">⚡</span>
             <span className="font-semibold text-xs tracking-wide">

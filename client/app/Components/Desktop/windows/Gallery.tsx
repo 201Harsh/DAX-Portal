@@ -72,6 +72,14 @@ const Gallery = () => {
             <FiHome className="text-gray-500" />
             <span>/</span>
             <span className="hover:text-red-400 cursor-pointer transition-colors">
+              dax
+            </span>
+            <span>/</span>
+            <span className="hover:text-red-400 cursor-pointer transition-colors">
+              root
+            </span>
+            <span>/</span>
+            <span className="hover:text-red-400 cursor-pointer transition-colors">
               Users
             </span>
             <span>/</span>
