@@ -133,7 +133,7 @@ const DesktopDock = () => {
 
   return (
     <>
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-3xl bg-gray-300/20 backdrop-blur-sm p-2 main-dock">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-3xl bg-gray-400/25 backdrop-blur-xs p-2 main-dock">
         <div ref={DockRef} className="flex items-center justify-center gap-2">
           {dockApps.map(({ id, name, icon, canOpen }) => (
             <button
