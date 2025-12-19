@@ -47,7 +47,7 @@ const WORK_LOCATION: any = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-cobra.png",
+          imageUrl: "/images/cobra.png",
         },
         {
           id: 5,
@@ -100,7 +100,7 @@ const WORK_LOCATION: any = {
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-ravx.png",
+          imageUrl: "/images/ravx.png",
         },
         {
           id: 5,
@@ -153,7 +153,7 @@ const WORK_LOCATION: any = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-varon.png",
+          imageUrl: "/images/varon.png",
         },
         {
           id: 5,
@@ -205,7 +205,7 @@ const WORK_LOCATION: any = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-raktflow.png",
+          imageUrl: "/images/rakt.png",
         },
         {
           id: 5,
