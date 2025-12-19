@@ -114,7 +114,7 @@ const Browser = () => {
               <h2 className="text-emerald-400 text-xs font-bold tracking-[0.2em] uppercase mb-2">
                 Developer Identity
               </h2>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-2 tracking-tighter whitespace-nowrap">
                 Harsh{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-pink-500 to-violet-500">
                   Pandey

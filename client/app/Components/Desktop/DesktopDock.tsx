@@ -10,13 +10,13 @@ const DesktopDock = () => {
     {
       id: "finder",
       name: "Portfolio",
-      icon: "finder.png",
+      icon: "daxfinder.png",
       canOpen: true,
     },
     {
       id: "browser",
-      name: "About Me",
-      icon: "safari.png",
+      name: "Dax Blog",
+      icon: "daxb.png",
       canOpen: true,
     },
     {
@@ -38,15 +38,15 @@ const DesktopDock = () => {
       canOpen: true,
     },
     {
-      id: "vscode",
-      name: "VS Code",
-      icon: "vscode.png",
+      id: "daxcode",
+      name: "Dax Code",
+      icon: "daxcode.png",
       canOpen: true,
     },
     {
       id: "trash",
       name: "Trash Bin",
-      icon: "trash.png",
+      icon: "bin.png",
       canOpen: true,
     },
   ];
