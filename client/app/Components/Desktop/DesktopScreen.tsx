@@ -3,7 +3,7 @@ import Image from "next/image";
 import DesktopNavbar from "./DesktopNavbar";
 import DesktopText from "./DesktopText";
 import DesktopDock from "./DesktopDock";
-import { Browser, Resume, Terminal } from "./windows";
+import { Browser, Gallery, Resume, Terminal } from "./windows";
 
 const DesktopScreen = () => {
   return (
@@ -33,6 +33,7 @@ const DesktopScreen = () => {
         <Terminal />
         <Browser />
         <Resume />
+        <Gallery />
       </div>
     </>
   );

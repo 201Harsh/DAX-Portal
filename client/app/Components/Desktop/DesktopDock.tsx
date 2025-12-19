@@ -20,7 +20,7 @@ const DesktopDock = () => {
       canOpen: true,
     },
     {
-      id: "photos",
+      id: "gallery",
       name: "Gallery",
       icon: "gallery.png",
       canOpen: true,

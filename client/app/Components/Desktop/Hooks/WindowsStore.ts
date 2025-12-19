@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
@@ -56,12 +56,12 @@ const WINDOW_CONFIG: { [key: string]: WindowConfig } = {
     prevPosition: null,
     prevSize: null,
   },
-  photos: {
+  gallery: {
     isOpen: false,
     zIndex: INITIAL_Z_INDEX,
     data: null,
     position: { x: 100, y: 100 },
-    size: { w: 600, h: 500 },
+    size: { w: 550, h: 600 },
     isMaximized: false,
     prevPosition: null,
     prevSize: null,
