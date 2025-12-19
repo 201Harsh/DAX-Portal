@@ -28,8 +28,8 @@ const Page = dynamic(() => import("react-pdf").then((mod) => mod.Page), {
 
 const Resume = () => {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState<any>(1);
-  const [scale, setScale] = useState(1.0);
+  const [pageNumber] = useState<any>(1);
+  const [scale] = useState(1.0);
   const [isWorkerLoaded, setIsWorkerLoaded] = useState(false);
 
   useEffect(() => {
@@ -98,15 +98,6 @@ const Resume = () => {
           />
         </Document>
       )}
-
-      <div className="py-1.5 px-4 bg-[#2d2d2d] border-t border-black flex justify-between items-center text-[10px] text-gray-500 uppercase tracking-widest font-mono">
-        <span>PDF Viewer v2.0</span>
-        <span>
-          {numPages
-            ? `Page ${pageNumber} of ${numPages}`
-            : "Reading Metadata..."}
-        </span>
-      </div>
     </motion.div>
   );
 };
