@@ -10,7 +10,7 @@ const DesktopScreen = () => {
     <>
       <div className="h-screen w-full overflow-hidden">
         <Image
-          src="/images/wallpaper.jpg"
+          src="/images/wallpaper3.jpg"
           alt="Desktop Background"
           className="h-full w-full object-cover absolute top-0 left-0 -z-10"
           width={100}
