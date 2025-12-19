@@ -9,20 +9,15 @@ import {
   FiHome,
   FiSearch,
   FiGrid,
-  FiMoreHorizontal,
-} from "react-icons/fi"; // Ensure you have react-icons installed
+} from "react-icons/fi";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const images = [
   {
     id: 1,
-    alt: "Aesthetics",
-    src: "1.jpg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 2,
-    alt: "AI Enhanced",
-    src: "2.png",
+    alt: "Aesthetics GYM",
+    src: "1.jpeg",
     className: "md:col-span-1 md:row-span-1",
   },
   {
@@ -38,19 +33,47 @@ const images = [
     className: "md:col-span-1 md:row-span-1",
   },
   {
-    id: 5,
-    alt: "Sunset Vibezz",
-    src: "6.jpg",
+    id: 7,
+    alt: "In the Eyes",
+    src: "7.jpeg",
+    className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    id: 6,
+    alt: "Random Shoots",
+    src: "8.jpeg",
     className: "md:col-span-2 md:row-span-1",
   },
+  // {
+  //   id: 8,
+  //   alt: "Random Shoots",
+  //   src: "6.jpg",
+  //   className: "md:col-span-2 md:row-span-1",
+  // },
+  // {
+  //   id: 2,
+  //   alt: "Outer Space",
+  //   src: "2.png",
+  //   className: "md:col-span-1 md:row-span-1",
+  // },
 ];
 
 const Gallery = () => {
+  useGSAP(() => {
+    gsap.to("#animate-gallery", {
+      opacity: 1,
+      duration: 0.5,
+      ease: "circ.out",
+      delay: 0.4,
+    });
+  }, []);
   return (
-    <div className="bg-[#131313] text-gray-300 w-full h-full rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative">
+    <div
+      id="animate-gallery"
+      className="bg-[#131313] opacity-0 text-gray-300 w-full h-full rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative"
+    >
       <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a] border-b border-white/5 select-none shrink-0 z-20">
         <div className="flex items-center gap-3 opacity-90">
-          {/* App Icon */}
           <div className="w-6 h-6 rounded-md bg-linear-to-br from-red-500 to-rose-600 flex items-center justify-center text-[10px] text-white font-bold shadow-lg shadow-blue-500/20">
             G
           </div>
