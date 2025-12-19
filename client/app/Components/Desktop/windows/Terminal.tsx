@@ -8,9 +8,9 @@ import gsap from "gsap";
 const Terminal = () => {
   const techStack = [
     { category: "Core", stack: "Full Stack Web Development" },
-    { category: "Frameworks", stack: "Next.js, Three.js" },
+    { category: "Frameworks", stack: "Next.js, React, Express.js" },
     { category: "Styling", stack: "Tailwind CSS, GSAP, Framer Motion" },
-    { category: "Tools", stack: "Git, GitHub, Vercel, Postman" },
+    { category: "Tools", stack: "Git, GitHub, Postman" },
     { category: "AI Integration", stack: "Google Gemini API, MCP Servers" },
   ];
 
