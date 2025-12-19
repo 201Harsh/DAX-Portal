@@ -235,7 +235,7 @@ const ABOUT_LOCATION: any = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/dev.jpg",
     },
     {
       id: 2,
@@ -244,16 +244,16 @@ const ABOUT_LOCATION: any = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/gallery/8.jpeg",
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "gamer-me.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/gallery/4.png",
     },
     {
       id: 4,
@@ -288,8 +288,6 @@ const RESUME_LOCATION: any = {
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
     },
   ],
 };
