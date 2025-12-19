@@ -68,7 +68,10 @@ const Finder = () => {
 
   const handleItemClick = (item: any) => {
     if (item.fileType === "pdf") return openWindow("resume");
+    if (item.fileType === "url") return window.open(item.href, "_blank");
     if (item.kind === "folder") return setActiveLocation(item);
+
+    openWindow(`${item.fileType}${item.kind}`, item);
   };
 
   useGSAP(() => {
@@ -151,6 +154,7 @@ const Finder = () => {
                       src={item.icon}
                       alt={item.name}
                       fill
+                      sizes="120px"
                       className="object-contain drop-shadow-lg"
                     />
                   </div>
