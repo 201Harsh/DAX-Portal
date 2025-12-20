@@ -2,13 +2,15 @@
 import { useEffect, useState } from "react";
 import Desktop from "./Components/Desktop/Desktop";
 import Mobile from "./Components/Mobile/Mobile";
+import BootSequence from "./utils/BootingAnimattion";
 
-const page = () => {
-  const [IsMobile, setIsMobile] = useState<boolean>(false);
+const Page = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isBooted, setIsBooted] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 828) {
+      if (window.innerWidth <= 758) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -21,7 +23,21 @@ const page = () => {
     };
   }, []);
 
-  return <>{!IsMobile ? <Desktop /> : <Mobile />}</>;
+  return (
+    <main className="h-screen w-screen overflow-hidden bg-black text-white relative z-100">
+      
+      <div className={`w-full h-full transition-opacity duration-1000 ${isBooted ? 'opacity-100' : 'opacity-0'}`}>
+         {isMobile ? <Mobile /> : <Desktop />}
+      </div>
+
+      {!isBooted && (
+        <div className="absolute inset-0 z-50">
+          <BootSequence onComplete={() => setIsBooted(true)} />
+        </div>
+      )}
+      
+    </main>
+  );
 };
 
-export default page;
+export default Page;

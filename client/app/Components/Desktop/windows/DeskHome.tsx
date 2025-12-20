@@ -113,7 +113,6 @@ const DeskHome = () => {
       bounds: "body",
       inertia: true,
       edgeResistance: 0.65,
-      zIndexBoost: false,
     });
   }, []);
 
