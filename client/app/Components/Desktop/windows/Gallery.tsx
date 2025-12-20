@@ -70,7 +70,7 @@ const Gallery = () => {
   return (
     <div
       id="animate-gallery"
-      className="bg-[#131313] opacity-0 text-gray-300 w-full h-full rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative"
+      className="bg-[#131313] opacity-0 text-gray-300 rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative"
     >
       <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a] border-b border-white/5 select-none shrink-0 z-20">
         <div className="flex items-center gap-3 opacity-90">

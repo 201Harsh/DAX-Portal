@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import WindowWrapper from "../Hooks/HOC/WindowWrapper";
@@ -19,6 +18,8 @@ import {
   FiTwitter,
 } from "react-icons/fi";
 import { SiFreelancer } from "react-icons/si";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const availabilityTags = [
   {
@@ -122,8 +123,20 @@ const itemVariants: any = {
 };
 
 const Contact = () => {
+  useGSAP(() => {
+    gsap.to("#animate-contact", {
+      opacity: 1,
+      duration: 0.5,
+      ease: "circ.out",
+      delay: 0.5,
+    });
+  }, []);
+
   return (
-    <div className="bg-[#121212]/95 backdrop-blur-2xl rounded-xl shadow-2xl flex flex-col overflow-hidden border border-white/10 ring-1 ring-white/5 font-sans">
+    <div
+      id="animate-contact"
+      className="bg-[#121212]/95 opacity-0 backdrop-blur-2xl rounded-xl shadow-2xl flex flex-col overflow-hidden border border-white/10 ring-1 ring-white/5 font-sans"
+    >
       <div className="flex items-center justify-between px-4 py-3 bg-[#181818] border-b border-white/5 select-none z-10">
         <div className="flex items-center gap-3">
           <div className="p-1.5 bg-green-500/10 rounded-md">
