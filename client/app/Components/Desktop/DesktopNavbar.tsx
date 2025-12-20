@@ -1,40 +1,10 @@
 "use client";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { FaWindows } from "react-icons/fa6";
 import { FiSearch, FiUser, FiWifi } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
 import useWindowsStore from "./Hooks/WindowsStore";
 
 const DesktopNavbar = () => {
-  useGSAP(() => {
-    const tl = gsap.timeline();
-
-    tl.from("#DeskNav", {
-      y: -20,
-      opacity: 0,
-      duration: 0.95,
-      ease: "back.out(1.7)",
-      delay: 0.4,
-    });
-
-    tl.from("#DeskLeftNavItems", {
-      x: 20,
-      opacity: 0,
-      duration: 0.2,
-      ease: "power2.out",
-      stagger: 0.06,
-    });
-
-    tl.from("#DeskRightNavItems", {
-      x: -20,
-      opacity: 0,
-      duration: 0.2,
-      ease: "power2.out",
-      stagger: 0.02,
-    });
-  }, []);
-
   const navbarItems = [
     { id: "browser", name: "About" },
     { id: "contact", name: "Contact" },
@@ -60,7 +30,6 @@ const DesktopNavbar = () => {
                 data-tooltip-id="navItems-tooltip"
                 data-tooltip-content={item.name}
                 className="cursor-pointer underline-offset-2 hover:underline"
-                id="DeskLeftNavItems"
               >
                 {item.name}
               </button>

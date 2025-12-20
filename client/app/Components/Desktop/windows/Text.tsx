@@ -4,6 +4,7 @@ import WindowWrapper from "../Hooks/HOC/WindowWrapper";
 import useWindowsStore from "../Hooks/WindowsStore";
 import WindowController from "../WindowController";
 import { BsFileTextFill } from "react-icons/bs";
+import { useGSAP } from "@gsap/react";
 
 const Text = () => {
   const { windows } = useWindowsStore();
@@ -19,7 +20,7 @@ const Text = () => {
   const { name, image, subtitle, description } = data;
 
   return (
-    <div className="bg-[#1e1e1e]/95 backdrop-blur-2xl text-gray-300 w-full rounded-xl font-sans text-sm shadow-2xl flex flex-col overflow-hidden border border-white/10 ring-1 ring-white/5">
+    <div className="bg-[#1e1e1e] backdrop-blur-2xl text-gray-300 w-full h-full scrollbar-small rounded-xl font-sans text-sm shadow-2xl flex flex-col overflow-hidden border border-white/10 ring-1 ring-white/5">
       <div className="flex items-center justify-between px-4 py-3 bg-[#181818] border-b border-white/5 select-none relative z-10 shrink-0">
         <div className="flex items-center gap-3 min-w-max">
           <div className="p-1.5 bg-white/10 rounded-md">

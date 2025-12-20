@@ -12,53 +12,56 @@ import {
 } from "react-icons/fi";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import useWindowsStore from "../Hooks/WindowsStore";
 
 const images = [
   {
     id: 1,
-    alt: "Aesthetics GYM",
-    src: "1.jpeg",
+    name: "Aesthetics GYM",
+    imageUrl: "/images/gallery/1.jpeg",
     className: "md:col-span-1 md:row-span-1",
   },
   {
     id: 3,
-    alt: "Mirror Selfie",
-    src: "3.png",
+    name: "Mirror Selfie",
+    imageUrl: "/images/gallery/3.png",
     className: "md:col-span-1 md:row-span-1",
   },
   {
     id: 4,
-    alt: "Gaming Setup",
-    src: "4.png",
+    name: "Gaming Setup",
+    imageUrl: "/images/gallery/4.png",
     className: "md:col-span-1 md:row-span-1",
   },
   {
     id: 7,
-    alt: "In the Eyes",
-    src: "7.jpeg",
+    name: "In the Eyes",
+    imageUrl: "/images/gallery/7.jpeg",
     className: "md:col-span-1 md:row-span-1",
   },
   {
     id: 6,
-    alt: "Random Shoots",
-    src: "8.jpeg",
+    name: "Random Shoots",
+    imageUrl: "/images/gallery/8.jpeg",
     className: "md:col-span-2 md:row-span-1",
   },
-  // {
-  //   id: 8,
-  //   alt: "Random Shoots",
-  //   src: "6.jpg",
-  //   className: "md:col-span-2 md:row-span-1",
-  // },
-  // {
-  //   id: 2,
-  //   alt: "Outer Space",
-  //   src: "2.png",
-  //   className: "md:col-span-1 md:row-span-1",
-  // },
+  {
+    id: 8,
+    name: "Random Shoots",
+    imageUrl: "/images/gallery/6.jpg",
+    className: "md:col-span-2 md:row-span-1",
+  },
+  {
+    id: 2,
+    name: "Outer Space",
+    imageUrl: "/images/gallery/2.png",
+    className: "md:col-span-1 md:row-span-1",
+  },
 ];
 
 const Gallery = () => {
+  const { openWindow } = useWindowsStore();
+
   useGSAP(() => {
     gsap.to("#animate-gallery", {
       opacity: 1,
@@ -67,10 +70,15 @@ const Gallery = () => {
       delay: 0.4,
     });
   }, []);
+
+  const OpenPhotos = (image: any) => {
+    openWindow("imgfile", image);
+  };
+
   return (
     <div
       id="animate-gallery"
-      className="bg-[#131313] opacity-0 text-gray-300 rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative"
+      className="bg-[#131313] scrollbar-small opacity-0 h-full text-gray-300 rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative"
     >
       <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a] border-b border-white/5 select-none shrink-0 z-20">
         <div className="flex items-center gap-3 opacity-90">
@@ -131,6 +139,7 @@ const Gallery = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
+              onClick={() => OpenPhotos(img)}
             >
               <div className="absolute inset-0 z-20 flex flex-col justify-end p-4 bg-linear-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
@@ -138,7 +147,7 @@ const Gallery = () => {
                     IMG_00{img.id}.RAW
                   </p>
                   <h3 className="text-white font-medium text-base tracking-tight">
-                    {img.alt}
+                    {img.name}
                   </h3>
                 </div>
               </div>
@@ -149,8 +158,8 @@ const Gallery = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <Image
-                  src={`/images/gallery/${img.src}`}
-                  alt={img.alt}
+                  src={img.imageUrl}
+                  alt={img.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"

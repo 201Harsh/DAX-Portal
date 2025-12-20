@@ -55,7 +55,7 @@ const DesktopDock = () => {
       opacity: 0,
       duration: 1.2,
       ease: "back.out(1.7)",
-      delay: 1,
+      delay: 6.3,
     });
 
     const dock: any = DockRef.current;

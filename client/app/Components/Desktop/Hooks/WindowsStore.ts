@@ -81,7 +81,7 @@ const WINDOW_CONFIG: { [key: string]: WindowConfig } = {
     zIndex: INITIAL_Z_INDEX,
     data: null,
     position: { x: 670, y: 50 },
-    size: { w: 600, h: 500 },
+    size: { w: 600, h: 650 },
     isMaximized: false,
     prevPosition: null,
     prevSize: null,

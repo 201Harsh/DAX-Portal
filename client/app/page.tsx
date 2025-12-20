@@ -10,7 +10,7 @@ const Page = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 758) {
+      if (window.innerWidth <= 769) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
