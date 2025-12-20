@@ -1,4 +1,3 @@
-import React from "react";
 import { FiSearch, FiGrid, FiList, FiClock } from "react-icons/fi";
 import { BsFillFolderFill } from "react-icons/bs";
 import Image from "next/image";
