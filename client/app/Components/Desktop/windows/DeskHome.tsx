@@ -133,6 +133,7 @@ const DeskHome = () => {
                 src={item.icon}
                 alt={item.name}
                 fill
+                sizes="100%"
                 className="object-contain"
                 priority
                 draggable={false}
