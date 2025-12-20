@@ -6,6 +6,7 @@ import DesktopDock from "./DesktopDock";
 import {
   Browser,
   Contact,
+  DeskHome,
   Finder,
   Gallery,
   ImageWin,
@@ -47,6 +48,7 @@ const DesktopScreen = () => {
         <Text />
         <ImageWin />
         <Contact />
+        <DeskHome />
       </div>
     </>
   );
