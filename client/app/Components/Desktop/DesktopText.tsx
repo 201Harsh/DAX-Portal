@@ -1,7 +1,9 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Draggable } from "gsap/all";
+import { Draggable, SplitText } from "gsap/all";
+
+gsap.registerPlugin(SplitText);
 
 const RenderText = (
   text: string,
@@ -72,20 +74,18 @@ const DesktopText = () => {
   const SubTitleRef = useRef(null);
 
   useGSAP(() => {
-    gsap.from(TitleRef.current, {
-      x: 20,
-      opacity: 0,
-      duration: 0.8,
-      ease: "back.out(1.5)",
-      delay: 0.8,
+    let SplittedText = SplitText.create(TitleRef.current, {
+      type: "chars",
+      charsClass: "char",
     });
-    gsap.from(SubTitleRef.current, {
-      x: -20,
-      scale: 0,
-      opacity: 0,
+
+    gsap.from(SplittedText.chars, {
+      y: 150,
+      delay: 6.3,
       duration: 0.8,
-      ease: "power1.out",
-      delay: 0.4,
+      opacity: 0,
+      ease: "power3.out",
+      stagger: 0.05,
     });
 
     Draggable.create("#text-animation-desktop", { onPress: () => {} });
