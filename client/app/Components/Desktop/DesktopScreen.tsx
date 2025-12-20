@@ -14,32 +14,74 @@ import {
   Terminal,
   Text,
 } from "./windows";
+import DropDownMenu from "./DropDownMenu";
+import { useState } from "react";
 
 const DesktopScreen = () => {
+  const [menu, setMenu] = useState({
+    x: 0,
+    y: 0,
+    visible: false,
+  });
+
+  const handleContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    let adjustedX = e.clientX;
+    let adjustedY = e.clientY;
+
+    if (adjustedX + 208 > window.innerWidth) {
+      adjustedX = window.innerWidth - 220;
+    }
+    if (adjustedY + 300 > window.innerHeight) {
+      adjustedY = window.innerHeight - 310;
+    }
+
+    setMenu({
+      x: adjustedX,
+      y: adjustedY,
+      visible: true,
+    });
+  };
+
+  const handleCloseMenu = () => {
+    if (menu.visible) {
+      setMenu((prev) => ({ ...prev, visible: false }));
+    }
+  };
+
   return (
     <>
-      <div className="h-screen w-full overflow-hidden">
+      <div
+        className="h-screen w-full overflow-hidden relative"
+        onContextMenu={handleContextMenu}
+        onClick={handleCloseMenu}
+      >
         <Image
-          src="/images/wallpaper3.jpg"
+          src="/images/wallpaper1.jpg"
           alt="Desktop Background"
           className="h-full w-full object-cover absolute top-0 left-0 -z-10"
-          width={100}
-          height={100}
-          priority
-          unoptimized
+          draggable={false}
+          preload={true}
+          sizes="100% auto"
+          fill={true}
         />
+
         {/* Navbar */}
+
         <DesktopNavbar />
 
         {/* Animated Text Area */}
-        <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 text-center text-white font-bold">
+
+        <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2 text-center text-white font-bold pointer-events-none">
           <DesktopText />
         </div>
 
         {/* Dock */}
+
         <DesktopDock />
 
         {/* Windows Stuff */}
+
         <Terminal />
         <Browser />
         <Resume />
@@ -48,7 +90,14 @@ const DesktopScreen = () => {
         <Text />
         <ImageWin />
         <Contact />
+
+        {/* Desktop Icons */}
+
         <DeskHome />
+
+        {/* Desktop Drop Down Menu */}
+
+        <DropDownMenu {...menu} />
       </div>
     </>
   );
