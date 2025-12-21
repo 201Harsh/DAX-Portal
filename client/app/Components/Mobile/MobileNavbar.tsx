@@ -1,10 +1,22 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { BsBatteryHalf } from "react-icons/bs";
 import { FiWifi } from "react-icons/fi";
 
 const MobileNavbar = () => {
+  useGSAP(() => {
+    gsap.from(".mobile-nav", {
+      y: -40,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power4.out",
+      delay: 5,
+    });
+  }, []);
+
   return (
     <>
-      <div className="w-full">
+      <div className="w-full mobile-nav">
         <div className="h-full w-full flex justify-between items-center px-4 py-5">
           <h5 className="text-md">
             {new Date().toLocaleTimeString("en-In", {

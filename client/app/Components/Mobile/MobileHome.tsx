@@ -1,3 +1,5 @@
+import { useGSAP } from "@gsap/react";
+import { Draggable } from "gsap/all";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
 
@@ -8,12 +10,21 @@ const MobileHome = () => {
       name: "Skills",
       icon: "dterminal.png",
       canOpen: true,
+      postion: "left-0 top-8",
     },
     {
       id: "daxcode",
       name: "Dax Code",
       icon: "daxcode.png",
       canOpen: true,
+      postion: "right-0 top-4",
+    },
+    {
+      id: "finder",
+      name: "Portfolio",
+      icon: "daxfinder.png",
+      canOpen: true,
+      postion: "left-8 top-64",
     },
   ];
 
@@ -31,20 +42,24 @@ const MobileHome = () => {
     // }
   };
 
+  useGSAP(() => {
+    Draggable.create(".mdock-icon");
+  }, []);
+
   return (
     <>
       <div className="p-4">
-        <div className="flex items-center justify-start gap-2">
-          {dockApps.map(({ id, name, icon, canOpen }) => (
+        <div className="flex items-center justify-start gap-2 relative h-full">
+          {dockApps.map(({ id, name, icon, canOpen, postion }) => (
             <button
               onClick={() => toogleApp({ id, canOpen })}
               disabled={!canOpen}
               data-tooltip-id="dock-tooltip"
               data-tooltip-content={name}
               key={id}
-              className={`h-21 w-21 rounded-2xl flex items-center justify-center cursor-pointer dock-icon ${
+              className={`h-25 w-25 rounded-2xl flex flex-col items-center justify-center cursor-pointer mdock-icon absolute ${
                 canOpen ? "" : "cursor-not-allowed opacity-55"
-              }`}
+              } ${postion}`}
             >
               <Image
                 src={`/images/${icon}`}
@@ -54,6 +69,7 @@ const MobileHome = () => {
                 height={100}
                 loading="lazy"
               />
+              <p>{name}</p>
             </button>
           ))}
         </div>
