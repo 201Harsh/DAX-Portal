@@ -156,7 +156,7 @@ const DesktopDock = () => {
           id="dock-tooltip"
           place="top"
           className="tooltip"
-          delayShow={150}
+          delayShow={50}
           delayHide={100}
         />
       </div>

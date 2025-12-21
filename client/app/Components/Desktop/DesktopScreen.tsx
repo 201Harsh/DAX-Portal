@@ -13,9 +13,11 @@ import {
   Resume,
   Terminal,
   Text,
+  Wallpapers,
 } from "./windows";
 import DropDownMenu from "./DropDownMenu";
 import { useState } from "react";
+import useWindowsStore from "./Hooks/WindowsStore";
 
 const DesktopScreen = () => {
   const [menu, setMenu] = useState({
@@ -23,6 +25,7 @@ const DesktopScreen = () => {
     y: 0,
     visible: false,
   });
+  const { wallpaper } = useWindowsStore();
 
   const handleContextMenu = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -57,13 +60,13 @@ const DesktopScreen = () => {
         onClick={handleCloseMenu}
       >
         <Image
-          src="/images/wallpaper1.jpg"
+          src={wallpaper}
           alt="Desktop Background"
           className="h-full w-full object-cover absolute top-0 left-0 -z-10"
           draggable={false}
           preload={true}
-          sizes="100% auto"
           fill={true}
+          unoptimized
         />
 
         {/* Navbar */}
@@ -90,6 +93,7 @@ const DesktopScreen = () => {
         <Text />
         <ImageWin />
         <Contact />
+        <Wallpapers />
 
         {/* Desktop Icons */}
 
