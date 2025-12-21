@@ -27,6 +27,13 @@ const MobileHome = () => {
       canOpen: true,
       postion: "left-8 top-64",
     },
+    {
+      id: "wallpapers",
+      name: "Wallpapers",
+      icon: "gallery.png",
+      canOpen: true,
+      postion: "right-2 top-4",
+    },
   ];
   const { windows, closeWindow, openWindow } = useWindowsStore();
 

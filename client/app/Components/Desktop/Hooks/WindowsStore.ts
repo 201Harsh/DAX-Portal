@@ -122,7 +122,10 @@ const useWindowsStore = create(
   immer((set: any) => ({
     windows: WINDOW_CONFIG,
     nextZIndex: INITIAL_Z_INDEX + 1,
-    wallpaper: "/images/wallpapers/wallpaper1.jpg",
+    wallpaper: {
+      desktop: "/images/wallpapers/wallpaper1.jpg",
+      mobile: "/images/wallpapers/wallpaper2.jpg",
+    },
 
     openWindow: (windowKey: string, data: any = null) =>
       set((state: any) => {
@@ -149,15 +152,21 @@ const useWindowsStore = create(
         win.zIndex = state.nextZIndex++;
       }),
 
-    changeWallpaper: (id: string, src: string) =>
+    changeWallpaper: (
+      id: string,
+      src: string,
+      mode: "desktop" | "mobile" = "desktop"
+    ) =>
       set((state: any) => {
-        // Update the global wallpaper used by DesktopScreen
-        state.wallpaper = src;
+        if (mode === "desktop") {
+          state.wallpaper.desktop = src;
+        } else {
+          state.wallpaper.mobile = src;
+        }
 
-        // Update the window data so the settings app knows which is active
         const win = state.windows.wallpapers;
         if (win) {
-          win.data = { id, src };
+          win.data = { id, src, mode };
         }
       }),
 

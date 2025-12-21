@@ -1,11 +1,9 @@
-"use client";
 import { useState } from "react";
 import Image from "next/image";
 import { MdWallpaper, MdCheckCircle } from "react-icons/md";
-import WindowWrapper from "../Hooks/HOC/WindowWrapper";
-import WindowController from "../WindowController";
 import clsx from "clsx";
-import useWindowsStore from "../Hooks/WindowsStore";
+import useWindowsStore from "../../Desktop/Hooks/WindowsStore";
+import MobileWindowWrapper from "../Hooks/MobileWindowWrapper";
 
 const WALLPAPERS = [
   { id: "1", name: "Gradient Solid", src: "/images/wallpapers/wallpaper.jpg" },
@@ -27,29 +25,28 @@ const WALLPAPERS = [
   },
 ];
 
-const WallpapersWin = () => {
-  const { changeWallpaper, wallpaper } = useWindowsStore();
-  const [activeId, setActiveId] = useState("2");
-  const [activeSrc, setActiveSrc] = useState(wallpaper.desktop);
+const MobileWallpaper = () => {
+  const { changeWallpaper, wallpaper, closeWindow } = useWindowsStore();
+  const [activeId, setActiveId] = useState("3");
+  const [activeSrc, setActiveSrc] = useState(wallpaper.mobile);
 
   const handleWallpaperChange = (id: string, src: string) => {
     setActiveId(id);
     setActiveSrc(src);
-    changeWallpaper(id, src , "desktop");
+    changeWallpaper(id, src, "mobile");
+    closeWindow("wallpapers");
   };
-
   return (
     <div className="bg-[#1e1e1e]/95 backdrop-blur-2xl text-gray-300  rounded-xl font-sans text-sm shadow-2xl flex flex-col overflow-hidden border border-white/10 ring-1 ring-white/5">
       <div className="flex items-center justify-between px-4 py-3 bg-[#181818] border-b border-white/5 select-none relative z-10 shrink-0">
         <div className="flex items-center gap-3">
           <div className="p-1.5 bg-pink-500/10 rounded-md">
-            <MdWallpaper className="text-pink-400 text-sm" />
+            <MdWallpaper className="text-red-400 text-sm" />
           </div>
           <span className="font-semibold text-xs tracking-wide text-gray-200">
             Wallpaper & Appearance
           </span>
         </div>
-        <WindowController windowKey="wallpapers" />
       </div>
 
       <div className="flex-1 overflow-y-auto p-6 custom-scrollbar bg-[#121212]">
@@ -132,5 +129,9 @@ const WallpapersWin = () => {
   );
 };
 
-const WallpaperWrapper = WindowWrapper(WallpapersWin, "wallpapers");
-export default WallpaperWrapper;
+const MobileWallpaperWrapper = MobileWindowWrapper(
+  MobileWallpaper,
+  "wallpapers"
+);
+
+export default MobileWallpaperWrapper;
