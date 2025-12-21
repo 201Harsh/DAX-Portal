@@ -3,6 +3,16 @@ import DesktopText from "../Desktop/DesktopText";
 import MobileNavbar from "./MobileNavbar";
 import MobileDock from "./MobileDock";
 import MobileHome from "./MobileHome";
+import {
+  MobileBrowser,
+  MobileContact,
+  MobileFinder,
+  MobileGalley,
+  MobileImg,
+  MobileResume,
+  MobileTerminal,
+  MobileText,
+} from "./windows";
 
 const MobileScreen = () => {
   return (
@@ -30,7 +40,15 @@ const MobileScreen = () => {
         <MobileDock />
 
         {/* MobileHome*/}
+        <MobileTerminal />
         <MobileHome />
+        <MobileResume />
+        <MobileBrowser />
+        <MobileGalley />
+        <MobileContact />
+        <MobileFinder />
+        <MobileText />
+        <MobileImg />
       </div>
     </>
   );

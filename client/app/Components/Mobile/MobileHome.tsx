@@ -1,14 +1,13 @@
-import { useGSAP } from "@gsap/react";
-import { Draggable } from "gsap/all";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
+import useWindowsStore from "../Desktop/Hooks/WindowsStore";
 
 const MobileHome = () => {
   const dockApps = [
     {
       id: "terminal",
       name: "Skills",
-      icon: "dterminal.png",
+      icon: "terminal.png",
       canOpen: true,
       postion: "left-0 top-8",
     },
@@ -29,29 +28,26 @@ const MobileHome = () => {
     {
       id: "finder",
       name: "Portfolio",
-      icon: "daxfinder.png",
+      icon: "finder.png",
       canOpen: true,
       postion: "left-8 top-64",
     },
   ];
+  const { windows, closeWindow, openWindow } = useWindowsStore();
 
   const toogleApp = (app: { id: string; canOpen: boolean }) => {
-    // if (!app.canOpen) return;
-    // const window = windows[app.id];
-    // if (!window) {
-    //   console.log("Window Not Found!");
-    //   return;
-    // }
-    // if (window.isOpen) {
-    //   closeWindow(app.id);
-    // } else {
-    //   openWindow(app.id);
-    // }
+    if (!app.canOpen) return;
+    const window = windows[app.id];
+    if (!window) {
+      console.log("Window Not Found!");
+      return;
+    }
+    if (window.isOpen) {
+      closeWindow(app.id);
+    } else {
+      openWindow(app.id);
+    }
   };
-
-  useGSAP(() => {
-    Draggable.create(".mdock-icon");
-  }, []);
 
   return (
     <>
