@@ -1,6 +1,5 @@
 import WindowWrapper from "../Hooks/HOC/WindowWrapper";
 import { SiTicktick } from "react-icons/si";
-import { FiFlag } from "react-icons/fi";
 import WindowController from "../WindowController";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

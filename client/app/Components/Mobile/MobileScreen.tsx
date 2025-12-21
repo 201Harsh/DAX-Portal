@@ -13,14 +13,18 @@ import {
   MobileResume,
   MobileTerminal,
   MobileText,
+  MobileWallpaper,
 } from "./windows";
+import useWindowsStore from "../Desktop/Hooks/WindowsStore";
 
 const MobileScreen = () => {
+  const { wallpaper } = useWindowsStore();
+
   return (
     <>
       <div className="h-screen w-full overflow-hidden relative">
         <Image
-          src="/images/wallpapers/wallpaper2.jpg"
+          src={wallpaper.mobile}
           alt="Desktop Background"
           className="h-full w-full object-cover absolute top-0 left-0 -z-10"
           draggable={false}
@@ -50,6 +54,7 @@ const MobileScreen = () => {
         <MobileFinder />
         <MobileText />
         <MobileImg />
+        <MobileWallpaper />
       </div>
     </>
   );
