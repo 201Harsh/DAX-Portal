@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dax-portal.vercel.app"),
 
   openGraph: {
-    title: "DAX Portal — OS-Grade Interactive Portfolio",
+    title: "Harsh’s Portfolio | DAX Portal — OS-Grade Interactive System",
     description:
-      "An operating-system-style interactive portfolio by Harsh Pandey. Featuring boot sequences, desktop & mobile OS modes, draggable windows, fullscreen apps, terminal, and a finder-style data vault.",
+      "A next-generation, operating-system-style portfolio by Harsh Pandey, complete with a real boot sequence, desktop and mobile OS environments, window and app management, a built-in terminal, and a Finder-inspired data vault.",
     url: "https://dax-portal.vercel.app",
     siteName: "DAX Portal",
     images: [
