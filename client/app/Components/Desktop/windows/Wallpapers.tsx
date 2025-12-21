@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { MdWallpaper, MdCheckCircle } from "react-icons/md";
 import WindowWrapper from "../Hooks/HOC/WindowWrapper";
@@ -8,15 +8,28 @@ import clsx from "clsx";
 import useWindowsStore from "../Hooks/WindowsStore";
 
 const WALLPAPERS = [
-  { id: "1", name: "Gradient Solid", src: "/images/wallpaper.jpg" },
-  { id: "2", name: "Midnight Valley", src: "/images/wallpaper0.jpg" },
-  { id: "3", name: "Aurora Borealis", src: "/images/wallpaper1.jpg" },
-  { id: "4", name: "Neon City", src: "/images/wallpaper3.jpg" },
+  { id: "1", name: "Gradient Solid", src: "/images/wallpapers/wallpaper.jpg" },
+  {
+    id: "2",
+    name: "Aurora Borealis",
+    src: "/images/wallpapers/wallpaper1.jpg",
+  },
+  { id: "3", name: "Hitman Reborn", src: "/images/wallpapers/wallpaper2.jpg" },
+  {
+    id: "4",
+    name: "Pink Sunset City",
+    src: "/images/wallpapers/wallpaper3.jpg",
+  },
+  {
+    id: "5",
+    name: "Moonlight Love",
+    src: "/images/wallpapers/wallpaper4.jpg",
+  },
 ];
 
 const WallpapersWin = () => {
-  const { changeWallpaper , wallpaper } = useWindowsStore();
-  const [activeId, setActiveId] = useState("3");
+  const { changeWallpaper, wallpaper } = useWindowsStore();
+  const [activeId, setActiveId] = useState("2");
   const [activeSrc, setActiveSrc] = useState(wallpaper);
 
   const handleWallpaperChange = (id: string, src: string) => {
@@ -50,6 +63,7 @@ const WallpapersWin = () => {
                 src={activeSrc}
                 alt="Current Wallpaper"
                 fill
+                sizes="auto"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority
               />
@@ -86,6 +100,7 @@ const WallpapersWin = () => {
                       fill
                       sizes="(max-width: 768px) 50vw, 33vw"
                       className="object-cover"
+                      priority={wp.id === "3"}
                     />
 
                     <div

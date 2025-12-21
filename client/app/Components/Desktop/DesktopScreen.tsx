@@ -64,9 +64,9 @@ const DesktopScreen = () => {
           alt="Desktop Background"
           className="h-full w-full object-cover absolute top-0 left-0 -z-10"
           draggable={false}
-          preload={true}
           fill={true}
           unoptimized
+          priority={true}
         />
 
         {/* Navbar */}

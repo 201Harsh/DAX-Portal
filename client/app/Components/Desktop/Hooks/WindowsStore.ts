@@ -122,7 +122,7 @@ const useWindowsStore = create(
   immer((set: any) => ({
     windows: WINDOW_CONFIG,
     nextZIndex: INITIAL_Z_INDEX + 1,
-    wallpaper: "/images/wallpaper1.jpg",
+    wallpaper: "/images/wallpapers/wallpaper1.jpg",
 
     openWindow: (windowKey: string, data: any = null) =>
       set((state: any) => {
