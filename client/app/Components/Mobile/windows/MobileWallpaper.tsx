@@ -26,14 +26,15 @@ const WALLPAPERS = [
 ];
 
 const MobileWallpaper = () => {
-  const { changeWallpaper, wallpaper } = useWindowsStore();
+  const { changeWallpaper, wallpaper, closeWindow } = useWindowsStore();
   const [activeId, setActiveId] = useState("3");
   const [activeSrc, setActiveSrc] = useState(wallpaper.mobile);
 
   const handleWallpaperChange = (id: string, src: string) => {
     setActiveId(id);
     setActiveSrc(src);
-    changeWallpaper(id, src , "mobile");
+    changeWallpaper(id, src, "mobile");
+    closeWindow("wallpapers");
   };
   return (
     <div className="bg-[#1e1e1e]/95 backdrop-blur-2xl text-gray-300  rounded-xl font-sans text-sm shadow-2xl flex flex-col overflow-hidden border border-white/10 ring-1 ring-white/5">
@@ -128,6 +129,9 @@ const MobileWallpaper = () => {
   );
 };
 
-const MobileWallpaperWrapper = MobileWindowWrapper(MobileWallpaper, "wallpapers");
+const MobileWallpaperWrapper = MobileWindowWrapper(
+  MobileWallpaper,
+  "wallpapers"
+);
 
 export default MobileWallpaperWrapper;
