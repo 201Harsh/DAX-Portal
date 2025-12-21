@@ -10,7 +10,7 @@ const MobileNavbar = () => {
       opacity: 0,
       duration: 0.5,
       ease: "power4.out",
-      delay: 5,
+      delay: 2.5,
     });
   }, []);
 

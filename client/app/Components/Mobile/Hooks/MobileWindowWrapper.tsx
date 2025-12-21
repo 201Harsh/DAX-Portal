@@ -2,12 +2,38 @@
 import { useLayoutEffect, useRef } from "react";
 import useWindowsStore from "../../Desktop/Hooks/WindowsStore";
 import { FaChevronLeft } from "react-icons/fa6";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const MobileWindowWrapper = (Componet: any, windowKey: any) => {
   const Wrapped = (props: any) => {
     const MRef = useRef<HTMLDivElement | null>(null);
     const { windows, closeWindow } = useWindowsStore();
     const { isOpen, zIndex } = windows[windowKey];
+
+    useGSAP(() => {
+      const el = MRef.current;
+
+      if (!el || !isOpen) return;
+
+      el.style.display = "block";
+
+      gsap.fromTo(
+        el,
+        {
+          opacity: 0,
+          scale: 0.85,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.4,
+          ease: "power3.out",
+        }
+      );
+    }, [isOpen]);
 
     useLayoutEffect(() => {
       const el = MRef.current;

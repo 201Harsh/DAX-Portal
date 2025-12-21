@@ -81,7 +81,7 @@ const DesktopText = () => {
 
     gsap.from(SplittedText.chars, {
       y: 150,
-      delay: 5.1,
+      delay: 2.95,
       duration: 0.5,
       opacity: 0,
       ease: "power2.out",

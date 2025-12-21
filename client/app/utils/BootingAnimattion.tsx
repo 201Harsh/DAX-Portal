@@ -16,12 +16,12 @@ const BootSequence = ({ onComplete }: BootProps) => {
     if (stage === 1 && logoRef.current) {
       const tl = gsap.timeline({
         onComplete: () => {
-          gsap.to(".boot-screen", { opacity: 0, duration: 0.8, onComplete });
+          gsap.to(".boot-screen", { opacity: 0, duration: 0.5, onComplete });
         },
       });
 
-      tl.to(".boot-screen", { backgroundColor: "#000000", duration: 0.5 })
-        .to(".scanlines", { opacity: 0, duration: 0.5 }, "<")
+      tl.to(".boot-screen", { backgroundColor: "#000000", duration: 0.2 })
+        .to(".scanlines", { opacity: 0, duration: 0.4 }, "<")
 
         .fromTo(
           logoRef.current.querySelectorAll("path"),
@@ -29,7 +29,7 @@ const BootSequence = ({ onComplete }: BootProps) => {
           {
             strokeDashoffset: 0,
             opacity: 1,
-            duration: 1.6,
+            duration: 0.6,
             ease: "power3.inOut",
             stagger: 0.1,
           }
@@ -37,19 +37,19 @@ const BootSequence = ({ onComplete }: BootProps) => {
 
         .to(
           logoRef.current,
-          { filter: "drop-shadow(0 0 15px #dc2626)", duration: 0.5 },
+          { filter: "drop-shadow(0 0 15px #dc2626)", duration: 0.2 },
           "-=0.5"
         )
 
         .to(
           logoRef.current,
-          { fill: "rgba(220, 38, 38, 0.05)", duration: 0.5 },
+          { fill: "rgba(220, 38, 38, 0.05)", duration: 0.4 },
           "-=0.5"
         )
 
         .to(
           ".progress-bar",
-          { width: "100%", duration: 1.5, ease: "power2.inOut" },
+          { width: "100%", duration: 0.8, ease: "power2.inOut" },
           "-=0.5"
         )
 
