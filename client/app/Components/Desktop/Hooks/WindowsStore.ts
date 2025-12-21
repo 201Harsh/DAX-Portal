@@ -96,12 +96,12 @@ const WINDOW_CONFIG: { [key: string]: WindowConfig } = {
     prevPosition: null,
     prevSize: null,
   },
-  vscode: {
+  daxcode: {
     isOpen: false,
     zIndex: INITIAL_Z_INDEX,
     data: null,
     position: { x: 500, y: 100 },
-    size: { w: 600, h: 500 },
+    size: { w: 750, h: 650 },
     isMaximized: false,
     prevPosition: null,
     prevSize: null,

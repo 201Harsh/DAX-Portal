@@ -6,6 +6,7 @@ import DesktopDock from "./DesktopDock";
 import {
   Browser,
   Contact,
+  DaxCode,
   DeskHome,
   Finder,
   Gallery,
@@ -94,6 +95,7 @@ const DesktopScreen = () => {
         <ImageWin />
         <Contact />
         <Wallpapers />
+        <DaxCode />
 
         {/* Desktop Icons */}
 

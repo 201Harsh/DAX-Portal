@@ -1,5 +1,6 @@
 import Browser from "./Browser";
 import Contact from "./Contact";
+import DaxCode from "./DaxCode";
 import DeskHome from "./DeskHome";
 import Finder from "./FInder";
 import Gallery from "./Gallery";
@@ -20,5 +21,6 @@ export {
   ImageWin,
   Contact,
   DeskHome,
-  Wallpapers
+  Wallpapers,
+  DaxCode
 };
