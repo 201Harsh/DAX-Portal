@@ -139,8 +139,8 @@ const Contact = () => {
     >
       <div className="flex items-center justify-between px-4 py-3 bg-[#181818] border-b border-white/5 select-none z-10">
         <div className="flex items-center gap-3">
-          <div className="p-1.5 bg-green-500/10 rounded-md">
-            <FiMail className="text-green-500 text-xs" />
+          <div className="p-1.5 bg-red-500/10 rounded-md">
+            <FiMail className="text-red-500 text-sm" />
           </div>
           <span className="font-semibold text-xs tracking-wide text-gray-200">
             Contact Me

@@ -23,8 +23,8 @@ const Text = () => {
     <div className="bg-[#1e1e1e] backdrop-blur-2xl text-gray-300 w-full h-full scrollbar-small rounded-xl font-sans text-sm shadow-2xl flex flex-col overflow-hidden border border-white/10 ring-1 ring-white/5">
       <div className="flex items-center justify-between px-4 py-3 bg-[#181818] border-b border-white/5 select-none relative z-10 shrink-0">
         <div className="flex items-center gap-3 min-w-max">
-          <div className="p-1.5 bg-white/10 rounded-md">
-            <BsFileTextFill className="text-gray-300 text-xs" />
+          <div className="p-1.5 bg-red-400/10 rounded-md">
+            <BsFileTextFill className="text-red-500 text-xs" />
           </div>
           <span className="font-semibold text-xs tracking-wide text-gray-200 truncate max-w-50">
             {name || "Untitled.txt"}
