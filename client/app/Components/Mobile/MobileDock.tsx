@@ -7,19 +7,19 @@ const MobileDock = () => {
     {
       id: "finder",
       name: "Portfolio",
-      icon: "daxfinder.png",
+      icon: "finder.png",
       canOpen: true,
     },
     {
       id: "browser",
       name: "Dax Blog",
-      icon: "daxb.png",
+      icon: "safari.png",
       canOpen: true,
     },
     {
       id: "gallery",
       name: "Gallery",
-      icon: "gallery.png",
+      icon: "photos.png",
       canOpen: true,
     },
     {

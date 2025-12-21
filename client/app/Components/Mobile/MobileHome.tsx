@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
 import useWindowsStore from "../Desktop/Hooks/WindowsStore";
+import { useGSAP } from "@gsap/react";
+import { Draggable } from "gsap/all";
 
 const MobileHome = () => {
   const dockApps = [
@@ -19,15 +21,8 @@ const MobileHome = () => {
       postion: "right-8 top-44",
     },
     {
-      id: "daxcode",
-      name: "Dax Code",
-      icon: "daxcode.png",
-      canOpen: true,
-      postion: "right-0 top-4",
-    },
-    {
       id: "finder",
-      name: "Portfolio",
+      name: "Projects",
       icon: "finder.png",
       canOpen: true,
       postion: "left-8 top-64",
@@ -48,6 +43,16 @@ const MobileHome = () => {
       openWindow(app.id);
     }
   };
+
+  useGSAP(() => {
+    Draggable.create(".mdock-icon", {
+      type: "x,y",
+      bounds: "body",
+      inertia: true,
+      edgeResistance: 0.65,
+      zIndexBoost: false,
+    });
+  });
 
   return (
     <>

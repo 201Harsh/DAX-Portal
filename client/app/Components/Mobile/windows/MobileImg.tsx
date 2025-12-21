@@ -62,7 +62,6 @@ const MobileImg = () => {
   );
 };
 
-// Wrap it with your MobileWindowWrapper
 const MobileImgWrapper = MobileWindowWrapper(MobileImg, "imgfile");
 
 export default MobileImgWrapper;
