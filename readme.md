@@ -13,7 +13,7 @@ It is not a traditional website — it is a **fully interactive system interface
 
 ## 🚀 Live Demo
 
-🔗 **Live Portal:** https://dax-portal.vercel.app  
+🔗 **Live Portal:** https://dax-portal.vercel.app
 💻 **GitHub Repository:** https://github.com/201Harsh/DAX-Portal
 
 ---
