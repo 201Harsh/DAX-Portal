@@ -13,6 +13,13 @@ const MobileHome = () => {
       postion: "left-0 top-8",
     },
     {
+      id: "resume",
+      name: "Resume",
+      icon: "pdf.png",
+      canOpen: true,
+      postion: "right-8 top-44",
+    },
+    {
       id: "daxcode",
       name: "Dax Code",
       icon: "daxcode.png",
@@ -65,8 +72,8 @@ const MobileHome = () => {
                 src={`/images/${icon}`}
                 alt={name}
                 className="h-full w-full"
-                width={100}
-                height={100}
+                width={95}
+                height={95}
                 loading="lazy"
               />
               <p>{name}</p>
