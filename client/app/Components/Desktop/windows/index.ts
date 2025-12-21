@@ -7,6 +7,8 @@ import ImageWin from "./ImageWin";
 import Resume from "./Resume";
 import Terminal from "./Terminal";
 import Text from "./Text";
+import Wallpapers from "./Wallpapers";
+
 
 export {
   Terminal,
@@ -18,4 +20,5 @@ export {
   ImageWin,
   Contact,
   DeskHome,
+  Wallpapers
 };

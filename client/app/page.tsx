@@ -12,8 +12,10 @@ const Page = () => {
     const handleResize = () => {
       if (window.innerWidth <= 769) {
         setIsMobile(true);
+        setIsBooted(false);
       } else {
         setIsMobile(false);
+        setIsBooted(false);
       }
     };
     handleResize();
@@ -25,9 +27,12 @@ const Page = () => {
 
   return (
     <main className="h-screen w-screen overflow-hidden bg-black text-white relative z-100">
-      
-      <div className={`w-full h-full transition-opacity duration-1000 ${isBooted ? 'opacity-100' : 'opacity-0'}`}>
-         {isMobile ? <Mobile /> : <Desktop />}
+      <div
+        className={`w-full h-full transition-opacity duration-1000 ${
+          isBooted ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        {isMobile ? <Mobile /> : <Desktop />}
       </div>
 
       {!isBooted && (

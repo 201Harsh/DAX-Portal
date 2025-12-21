@@ -16,7 +16,7 @@ const MenuItems = [
   {
     icon: FiImage,
     label: "Change Wallpaper",
-    kind: "browser",
+    kind: "wallpapers",
   },
   {
     icon: CgBrowser,

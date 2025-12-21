@@ -106,7 +106,7 @@ const WINDOW_CONFIG: { [key: string]: WindowConfig } = {
     prevPosition: null,
     prevSize: null,
   },
-  spotify: {
+  wallpapers: {
     isOpen: false,
     zIndex: INITIAL_Z_INDEX,
     data: null,
@@ -122,6 +122,7 @@ const useWindowsStore = create(
   immer((set: any) => ({
     windows: WINDOW_CONFIG,
     nextZIndex: INITIAL_Z_INDEX + 1,
+    wallpaper: "/images/wallpaper1.jpg",
 
     openWindow: (windowKey: string, data: any = null) =>
       set((state: any) => {
@@ -146,6 +147,18 @@ const useWindowsStore = create(
       set((state: any) => {
         const win = state.windows[windowKey];
         win.zIndex = state.nextZIndex++;
+      }),
+
+    changeWallpaper: (id: string, src: string) =>
+      set((state: any) => {
+        // Update the global wallpaper used by DesktopScreen
+        state.wallpaper = src;
+
+        // Update the window data so the settings app knows which is active
+        const win = state.windows.wallpapers;
+        if (win) {
+          win.data = { id, src };
+        }
       }),
 
     toggleMaximizeWindow: (windowKey: string) =>
