@@ -67,7 +67,6 @@ const DesktopScreen = () => {
           draggable={false}
           fill={true}
           unoptimized
-          priority={true}
         />
 
         {/* Navbar */}

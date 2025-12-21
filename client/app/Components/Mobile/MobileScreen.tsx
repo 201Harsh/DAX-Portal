@@ -31,7 +31,6 @@ const MobileScreen = () => {
           fill={true}
           sizes="100vw"
           unoptimized
-          priority={true}
         />
 
         {/* navbar */}

@@ -65,7 +65,6 @@ const WallpapersWin = () => {
                 fill
                 sizes="auto"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                priority
               />
               <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
                 <MdCheckCircle className="text-green-400" />
