@@ -81,11 +81,11 @@ const DesktopText = () => {
 
     gsap.from(SplittedText.chars, {
       y: 150,
-      delay: 6.3,
-      duration: 0.8,
+      delay: 6.12,
+      duration: 0.6,
       opacity: 0,
       ease: "power3.out",
-      stagger: 0.05,
+      stagger: 0.04,
     });
 
     Draggable.create("#text-animation-desktop", { onPress: () => {} });
