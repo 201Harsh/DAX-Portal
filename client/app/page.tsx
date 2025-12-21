@@ -6,7 +6,7 @@ import BootSequence from "./utils/BootingAnimattion";
 
 const Page = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [isBooted, setIsBooted] = useState<boolean>(false);
+  const [isBooted, setIsBooted] = useState<boolean>(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,17 +29,17 @@ const Page = () => {
     <main className="h-screen w-screen overflow-hidden bg-black text-white relative z-100">
       <div
         className={`w-full h-full transition-opacity duration-1000 ${
-          isBooted ? "opacity-100" : "opacity-0"
+          isBooted ? "opacity-100" : "opacity-100"
         }`}
       >
         {isMobile ? <Mobile /> : <Desktop />}
       </div>
 
-      {!isBooted && (
+      {/* {!isBooted && (
         <div className="absolute inset-0 z-50">
           <BootSequence onComplete={() => setIsBooted(true)} />
         </div>
-      )}
+      )} */}
       
     </main>
   );

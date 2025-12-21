@@ -1,9 +1,11 @@
-import React from 'react'
+import MobileScreen from "./MobileScreen";
 
 const Mobile = () => {
   return (
-    <div>Mobile</div>
-  )
-}
+    <>
+      <MobileScreen />
+    </>
+  );
+};
 
-export default Mobile
+export default Mobile;

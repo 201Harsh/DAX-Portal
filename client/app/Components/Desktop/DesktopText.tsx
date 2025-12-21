@@ -103,11 +103,11 @@ const DesktopText = () => {
         {" "}
         {RenderText(
           "Hey, I'm Harsh Pandey! welcome to",
-          "text-[26px] tracking-wide",
+          "text-md md:text-[26px] tracking-wide",
           100
         )}
       </p>
-      <h1 ref={TitleRef}>{RenderText("portfolio.", "text-9xl italic mt-5")}</h1>
+      <h1 ref={TitleRef}>{RenderText("portfolio.", "text-[5.5rem] md:text-9xl italic mt-5")}</h1>
     </div>
   );
 };
