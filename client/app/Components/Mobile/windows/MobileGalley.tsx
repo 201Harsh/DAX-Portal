@@ -1,8 +1,5 @@
-"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import WindowWrapper from "../Hooks/HOC/WindowWrapper";
-import WindowController from "../WindowController";
 import {
   FiArrowLeft,
   FiArrowRight,
@@ -10,76 +7,57 @@ import {
   FiSearch,
   FiGrid,
 } from "react-icons/fi";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import useWindowsStore from "../Hooks/WindowsStore";
+import MobileWindowWrapper from "../Hooks/MobileWindowWrapper";
+import useWindowsStore from "../../Desktop/Hooks/WindowsStore";
 
-const images = [
-  {
-    id: 1,
-    name: "Aesthetics GYM",
-    imageUrl: "/images/gallery/1.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 3,
-    name: "Mirror Selfie",
-    imageUrl: "/images/gallery/3.png",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 4,
-    name: "Gaming Setup",
-    imageUrl: "/images/gallery/4.png",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 7,
-    name: "In the Eyes",
-    imageUrl: "/images/gallery/7.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 6,
-    name: "Sunset Vibez",
-    imageUrl: "/images/gallery/8.jpeg",
-    className: "md:col-span-2 md:row-span-1",
-  },
-  {
-    id: 8,
-    name: "Random Shoots",
-    imageUrl: "/images/gallery/6.jpg",
-    className: "md:col-span-2 md:row-span-1",
-  },
-  {
-    id: 2,
-    name: "Outer Space",
-    imageUrl: "/images/gallery/2.png",
-    className: "md:col-span-1 md:row-span-1",
-  },
-];
+const MobileGalley = () => {
+  const images = [
+    {
+      id: 3,
+      name: "Mirror Selfie",
+      imageUrl: "/images/gallery/3.png",
+      className: "md:col-span-1 md:row-span-1",
+    },
+    {
+      id: 4,
+      name: "Gaming Setup",
+      imageUrl: "/images/gallery/4.png",
+      className: "md:col-span-1 md:row-span-1",
+    },
+    {
+      id: 7,
+      name: "In the Eyes",
+      imageUrl: "/images/gallery/7.jpeg",
+      className: "md:col-span-1 md:row-span-1",
+    },
+    {
+      id: 6,
+      name: "Sunset Vibez",
+      imageUrl: "/images/gallery/8.jpeg",
+      className: "md:col-span-2 md:row-span-1",
+    },
+    {
+      id: 8,
+      name: "Random Shoots",
+      imageUrl: "/images/gallery/6.jpg",
+      className: "md:col-span-2 md:row-span-1",
+    },
+    {
+      id: 2,
+      name: "Outer Space",
+      imageUrl: "/images/gallery/2.png",
+      className: "md:col-span-1 md:row-span-1",
+    },
+  ];
 
-const Gallery = () => {
   const { openWindow } = useWindowsStore();
-
-  useGSAP(() => {
-    gsap.to("#animate-gallery", {
-      opacity: 1,
-      duration: 0.5,
-      ease: "circ.out",
-      delay: 0.4,
-    });
-  }, []);
 
   const OpenPhotos = (image: any) => {
     openWindow("imgfile", image);
   };
 
   return (
-    <div
-      id="animate-gallery"
-      className="bg-[#131313] scrollbar-small opacity-0 h-full text-gray-300 rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative"
-    >
+    <div className="bg-[#131313] scrollbar-small h-full text-gray-300 rounded-lg font-sans shadow-2xl flex flex-col overflow-hidden border border-white/10 relative">
       <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a] border-b border-white/5 select-none shrink-0 z-20">
         <div className="flex items-center gap-3 opacity-90">
           <div className="w-6 h-6 rounded-md bg-linear-to-br from-red-500 to-rose-600 flex items-center justify-center text-[10px] text-white font-bold shadow-lg shadow-blue-500/20">
@@ -89,7 +67,6 @@ const Gallery = () => {
             Gallery
           </span>
         </div>
-        <WindowController windowKey="gallery" />
       </div>
 
       <div className="flex items-center justify-between px-4 py-2 bg-[#1a1a1a]/50 backdrop-blur-md border-b border-white/5 shrink-0 z-10">
@@ -99,15 +76,11 @@ const Gallery = () => {
             <FiArrowRight className="hover:text-white cursor-pointer transition-colors opacity-50" />
           </div>
 
-          <div className="flex items-center gap-2 bg-[#000000] px-3 py-1 rounded-md border border-white/10 text-xs text-gray-400 min-w-50">
+          <div className="flex items-center gap-1 bg-[#000000] px-3 py-1 rounded-md border border-white/10 text-xs text-gray-400 min-w-50">
             <FiHome className="text-gray-500" />
             <span>/</span>
             <span className="hover:text-red-400 cursor-pointer transition-colors">
-              dax
-            </span>
-            <span>/</span>
-            <span className="hover:text-red-400 cursor-pointer transition-colors">
-              root
+              dax@root:
             </span>
             <span>/</span>
             <span className="hover:text-red-400 cursor-pointer transition-colors">
@@ -174,5 +147,6 @@ const Gallery = () => {
   );
 };
 
-const GalleryWrapper = WindowWrapper(Gallery, "gallery");
-export default GalleryWrapper;
+const MobileGalleryWrapper = MobileWindowWrapper(MobileGalley, "gallery");
+
+export default MobileGalleryWrapper;
