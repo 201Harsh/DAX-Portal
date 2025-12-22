@@ -51,7 +51,7 @@ const MobileDock = () => {
 
   return (
     <>
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-2xl bg-gray-500/25 backdrop-blur-xs p-2 main-dock">
+      <div className="absolute bottom-28 left-1/2 -translate-x-1/2 rounded-2xl bg-gray-500/25 backdrop-blur-xs p-2 main-dock">
         <div className="flex items-center justify-center gap-2">
           {dockApps.map(({ id, name, icon, canOpen }) => (
             <button
@@ -60,7 +60,7 @@ const MobileDock = () => {
               data-tooltip-id="dock-tooltip"
               data-tooltip-content={name}
               key={id}
-              className={`h-21 w-21 rounded-2xl flex items-center justify-center cursor-pointer dock-icon ${
+              className={`h-18 w-18 rounded-2xl flex items-center justify-center cursor-pointer dock-icon ${
                 canOpen ? "" : "cursor-not-allowed opacity-55"
               }`}
             >

@@ -26,7 +26,7 @@ const MobileScreen = () => {
         <Image
           src={wallpaper.mobile}
           alt="Desktop Background"
-          className="h-full w-full object-cover absolute top-0 left-0 -z-10"
+          className="h-full w-full object-cover absolute top-0 left-0 -z-100"
           draggable={false}
           fill={true}
           sizes="100vw"
@@ -36,7 +36,7 @@ const MobileScreen = () => {
         {/* navbar */}
         <MobileNavbar />
 
-        <div className="absolute top-[70%] -translate-x-1/2 -translate-y-1/2 left-1/2 text-center text-white font-bold pointer-events-none">
+        <div className="absolute top-[55%] -translate-x-1/2 -translate-y-1/2 left-1/2 text-center text-white font-bold pointer-events-none">
           <DesktopText />
         </div>
 

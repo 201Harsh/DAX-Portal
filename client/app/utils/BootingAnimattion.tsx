@@ -104,7 +104,7 @@ const BootSequence = ({ onComplete }: BootProps) => {
 
           <div className="flex flex-col items-center gap-3">
             <h2 className="text-white text-5xl font-light tracking-[0.4em] drop-shadow-[0_0_10px_rgba(220,38,38,0.5)]">
-              DAX PORTAL
+              DAX
             </h2>
 
             <div className="w-80 h-0.75 bg-gray-900/80 rounded-full overflow-hidden relative backdrop-blur-sm">

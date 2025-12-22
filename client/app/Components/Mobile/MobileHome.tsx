@@ -11,28 +11,24 @@ const MobileHome = () => {
       name: "Skills",
       icon: "terminal.png",
       canOpen: true,
-      postion: "left-0 top-8",
     },
     {
       id: "resume",
       name: "Resume",
       icon: "pdf.png",
       canOpen: true,
-      postion: "right-8 top-44",
     },
     {
       id: "finder",
       name: "Projects",
       icon: "finder.png",
       canOpen: true,
-      postion: "left-8 top-64",
     },
     {
       id: "wallpapers",
       name: "Wallpapers",
       icon: "gallery.png",
       canOpen: true,
-      postion: "right-2 top-4",
     },
   ];
   const { windows, closeWindow, openWindow } = useWindowsStore();
@@ -51,30 +47,20 @@ const MobileHome = () => {
     }
   };
 
-  useGSAP(() => {
-    Draggable.create(".mdock-icon", {
-      type: "x,y",
-      bounds: "body",
-      inertia: true,
-      edgeResistance: 0.65,
-      zIndexBoost: false,
-    });
-  });
-
   return (
     <>
-      <div className="p-4">
-        <div className="flex items-center justify-start gap-2 relative h-full">
-          {dockApps.map(({ id, name, icon, canOpen, postion }) => (
+      <div className="p-6">
+        <div className="grid grid-cols-3 items-center justify-start gap-5 relative h-full mt-5 z-100">
+          {dockApps.map(({ id, name, icon, canOpen }) => (
             <button
               onClick={() => toogleApp({ id, canOpen })}
               disabled={!canOpen}
               data-tooltip-id="dock-tooltip"
               data-tooltip-content={name}
               key={id}
-              className={`h-25 w-25 rounded-2xl flex flex-col items-center justify-center cursor-pointer mdock-icon absolute ${
+              className={`h-16 w-16 rounded-2xl mt-5 flex flex-col items-center justify-center cursor-pointer mdock-icon ${
                 canOpen ? "" : "cursor-not-allowed opacity-55"
-              } ${postion}`}
+              }`}
             >
               <Image
                 src={`/images/${icon}`}
