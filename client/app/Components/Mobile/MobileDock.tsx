@@ -38,7 +38,6 @@ const MobileDock = () => {
     const window = windows[app.id];
 
     if (!window) {
-      console.log("Window Not Found!");
       return;
     }
 

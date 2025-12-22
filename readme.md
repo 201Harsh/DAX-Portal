@@ -227,14 +227,12 @@ http://localhost:3000
 ## 📁 Project Structure
 
 ```
-src/
+/
  ├── app/
  ├── Components/
  │   ├── Desktop/
  │   ├── Mobile/
  │   ├── Windows/
- │   └── Modules/
- ├── store/
  ├── utils/
  └── styles/
 ```
