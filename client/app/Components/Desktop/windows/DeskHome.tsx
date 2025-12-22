@@ -103,7 +103,6 @@ const DeskHome = () => {
         openWindow("resume");
         break;
       default:
-        console.warn("Unknown item type");
     }
   };
 

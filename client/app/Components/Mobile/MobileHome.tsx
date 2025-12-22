@@ -37,7 +37,6 @@ const MobileHome = () => {
     if (!app.canOpen) return;
     const window = windows[app.id];
     if (!window) {
-      console.log("Window Not Found!");
       return;
     }
     if (window.isOpen) {
