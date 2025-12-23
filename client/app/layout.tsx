@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Georama } from "next/font/google";
 import "./globals.css";
 
@@ -76,6 +77,13 @@ export const metadata: Metadata = {
 export const georama = Georama({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-georama",
+  display: "swap",
+});
+
+const pricedown = localFont({
+  src: "/fonts/pricedown.otf",
+  variable: "--font-pricedown",
   display: "swap",
 });
 
@@ -86,7 +94,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={georama.className}>{children}</body>
+      <body className={`${georama.variable} ${pricedown.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

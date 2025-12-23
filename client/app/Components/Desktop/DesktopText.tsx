@@ -97,7 +97,7 @@ const DesktopText = () => {
   return (
     <div
       id="text-animation-desktop"
-      className="cursor-default select-none pointer-events-auto whitespace-nowrap"
+      className="cursor-default select-none pointer-events-auto whitespace-nowrap geo"
     >
       <p ref={SubTitleRef}>
         {" "}
