@@ -19,7 +19,6 @@ import {
 import DropDownMenu from "./DropDownMenu";
 import { useState } from "react";
 import useWindowsStore from "./Hooks/WindowsStore";
-import DeskAbout from "./DeskAbout";
 
 const DesktopScreen = () => {
   const [menu, setMenu] = useState({
@@ -56,8 +55,6 @@ const DesktopScreen = () => {
 
   return (
     <>
-      {/* DeskAbout  */}
-      <DeskAbout />
       <div
         className="h-screen w-full overflow-hidden relative"
         onContextMenu={handleContextMenu}
