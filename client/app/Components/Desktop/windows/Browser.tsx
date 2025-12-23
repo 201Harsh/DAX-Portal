@@ -12,8 +12,12 @@ import WindowController from "../WindowController";
 import { BsFillShieldLockFill, BsLightningChargeFill } from "react-icons/bs";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import useWindowsStore from "../Hooks/WindowsStore";
 
 const Browser = () => {
+  const {closeWindow} = useWindowsStore();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,6 +36,17 @@ const Browser = () => {
       opacity: 1,
       transition: { type: "spring", stiffness: 100 },
     },
+  };
+
+  const openAboutFull = () => {
+    closeWindow("browser");
+    gsap.to("#show-desk", {
+      opacity: 1,
+      duration: 0.4,
+      ease: "power3.out",
+      delay: 0.2,
+      zIndex: 1000,
+    });
   };
 
   return (
@@ -146,7 +161,10 @@ const Browser = () => {
             </motion.div>
 
             <motion.div variants={itemVariants} className="pt-4">
-              <button className="bg-linear-to-r from-red-500 via-orange-500 to-yellow-500 cursor-pointer group relative inline-flex items-center justify-center px-8 py-3 font-bold text-white transition-all duration-200 bg-[#111] font-mono rounded-lg focus:outline-none ring-offset-2 focus:ring-2 ring-pink-500">
+              <button
+                onClick={openAboutFull}
+                className="bg-linear-to-r from-red-500 via-orange-500 to-yellow-500 cursor-pointer group relative inline-flex items-center justify-center px-8 py-3 font-bold text-white transition-all duration-200 bg-[#111] font-mono rounded-lg focus:outline-none ring-offset-2 focus:ring-2 ring-pink-500"
+              >
                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-linear-to-b from-transparent via-transparent to-gray-700"></span>
                 <span className="relative flex items-center gap-3">
                   INITIATE_DEEP_DIVE_SEQUENCE
