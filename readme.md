@@ -163,21 +163,6 @@ Mobile DAX is a **true mobile OS experience**, not a scaled desktop.
 
 ---
 
-## 🧠 DAX Intelligence
-
-**DAX Intelligence** is a system-level AI guide.
-
-It:
-
-- Explains modules & projects
-- Guides navigation
-- Preserves OS immersion
-- Acts as an embedded system assistant
-
-It is **not a chatbot** — it is part of the OS.
-
----
-
 ## ⚙️ Tech Stack
 
 ### Frontend
@@ -186,6 +171,11 @@ It is **not a chatbot** — it is part of the OS.
 - TypeScript
 - Tailwind CSS
 - Framer Motion
+- GSAP
+- React Icons
+- Immer
+- Zustand
+- CLSX
 
 ### State Management
 
@@ -234,7 +224,8 @@ http://localhost:3000
  │   ├── Mobile/
  │   ├── Windows/
  ├── utils/
- └── styles/
+ └── public/
+    ├── logo.png
 ```
 
 ---
@@ -258,6 +249,7 @@ MIT License © 2025 Harsh Pandey
 
 ## 📮 Contact
 
+- LinkedIn: https://www.linkedin.com/in/201harsh/
 - GitHub: https://github.com/201Harsh
 - Instagram: https://instagram.com/201harshs
 - Email: gamerpandeyharsh@gmail.com
@@ -270,3 +262,5 @@ MIT License © 2025 Harsh Pandey
 It is a **system you access**.
 
 > _Access Granted._
+
+# Made with ❤️ by Harsh Pandey
