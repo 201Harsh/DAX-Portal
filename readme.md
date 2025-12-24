@@ -1,8 +1,8 @@
-# 🩻 DAX Portal — The OS-Grade Interactive Portfolio System
+# DAX Portal — The OS-Grade Interactive Portfolio System
 
 [![MIT License](https://img.shields.io/badge/License-MIT-red.svg)](https://choosealicense.com/licenses/mit/)
 
-![DAX Portal Banner](https://img.shields.io/badge/🩻_DAX_Portal-OS_Grade_Interactive_System-darkred?style=for-the-badge&logo=windows-terminal&logoColor=white)
+![DAX Portal Banner](https://img.shields.io/badge/_DAX_Portal-OS_Grade_Interactive_System-darkred?style=for-the-badge&logo=windows-terminal&logoColor=white)
 
 **DAX Portal** is a next-generation **Operating-System-style portfolio platform**, engineered and designed by **Harsh Pandey**.  
 It is not a traditional website — it is a **fully interactive system interface** that behaves like a real OS across **desktop and mobile**, complete with boot sequences, window/app management, system modules, and AI-assisted navigation.
