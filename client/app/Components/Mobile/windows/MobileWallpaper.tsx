@@ -23,6 +23,16 @@ const WALLPAPERS = [
     name: "Moonlight Love",
     src: "/images/wallpapers/wallpaper4.jpg",
   },
+  {
+    id: "6",
+    name: "Windows Dark",
+    src: "/images/wallpapers/wallpaper5.jpg",
+  },
+  {
+    id: "7",
+    name: "MacOS Ventura",
+    src: "/images/wallpapers/wallpaper.png",
+  },
 ];
 
 const MobileWallpaper = () => {
