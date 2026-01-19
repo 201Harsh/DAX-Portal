@@ -25,17 +25,27 @@ const WALLPAPERS = [
     name: "Moonlight Love",
     src: "/images/wallpapers/wallpaper4.jpg",
   },
+  {
+    id: "6",
+    name: "Windows Dark",
+    src: "/images/wallpapers/wallpaper5.jpg",
+  },
+  {
+    id: "7",
+    name: "MacOS Ventura",
+    src: "/images/wallpapers/wallpaper.png",
+  },
 ];
 
 const WallpapersWin = () => {
   const { changeWallpaper, wallpaper } = useWindowsStore();
-  const [activeId, setActiveId] = useState("2");
+  const [activeId, setActiveId] = useState("6");
   const [activeSrc, setActiveSrc] = useState(wallpaper.desktop);
 
   const handleWallpaperChange = (id: string, src: string) => {
     setActiveId(id);
     setActiveSrc(src);
-    changeWallpaper(id, src , "desktop");
+    changeWallpaper(id, src, "desktop");
   };
 
   return (
