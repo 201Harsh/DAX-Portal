@@ -123,7 +123,7 @@ const useWindowsStore = create(
     windows: WINDOW_CONFIG,
     nextZIndex: INITIAL_Z_INDEX + 1,
     wallpaper: {
-      desktop: "/images/wallpapers/wallpaper1.jpg",
+      desktop: "/images/wallpapers/wallpaper5.jpg",
       mobile: "/images/wallpapers/wallpaper2.jpg",
     },
 
