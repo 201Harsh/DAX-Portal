@@ -133,7 +133,7 @@ const MobileContact = () => {
               <div className="relative w-full h-full rounded-full p-0.5 bg-linear-to-tr from-blue-400 to-emerald-400">
                 <div className="w-full h-full rounded-full overflow-hidden relative bg-black">
                   <Image
-                    src="/images/gallery/3.png" 
+                    src="/images/gallery/1.png" 
                     alt="Profile"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

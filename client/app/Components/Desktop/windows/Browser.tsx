@@ -82,7 +82,7 @@ const Browser = () => {
                 <Image
                   width={500}
                   height={500}
-                  src="/images/dev.jpg"
+                  src="/images/gallery/7.jpeg"
                   alt="Harsh Pandey"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-110"
                   priority

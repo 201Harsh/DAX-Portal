@@ -17,45 +17,39 @@ import useWindowsStore from "../Hooks/WindowsStore";
 const images = [
   {
     id: 1,
-    name: "Aesthetics GYM",
+    name: "Professional Shot",
+    imageUrl: "/images/gallery/1.png",
+    className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    id: 9,
+    name: "GYM Asthetics",
     imageUrl: "/images/gallery/1.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 3,
-    name: "Mirror Selfie",
-    imageUrl: "/images/gallery/3.png",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 4,
-    name: "Gaming Setup",
-    imageUrl: "/images/gallery/4.png",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 7,
-    name: "In the Eyes",
-    imageUrl: "/images/gallery/7.jpeg",
-    className: "md:col-span-1 md:row-span-1",
+    className: "md:col-span-2 md:row-span-1",
   },
   {
     id: 6,
-    name: "Sunset Vibez",
-    imageUrl: "/images/gallery/8.jpeg",
+    name: "Gaming Zone",
+    imageUrl: "/images/gallery/6.png",
     className: "md:col-span-2 md:row-span-1",
   },
   {
-    id: 8,
-    name: "Random Shoots",
-    imageUrl: "/images/gallery/6.jpg",
-    className: "md:col-span-2 md:row-span-1",
+    id: 7,
+    name: "Mirror Selfie",
+    imageUrl: "/images/gallery/7.jpeg",
+    className: "md:col-span-1 md:row-span-1",
   },
   {
     id: 2,
     name: "Outer Space",
     imageUrl: "/images/gallery/2.png",
     className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    id: 8,
+    name: "Random Shoots",
+    imageUrl: "/images/gallery/8.jpeg",
+    className: "md:col-span-2 md:row-span-1",
   },
 ];
 

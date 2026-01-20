@@ -13,33 +13,33 @@ import useWindowsStore from "../../Desktop/Hooks/WindowsStore";
 const MobileGalley = () => {
   const images = [
     {
-      id: 3,
-      name: "Mirror Selfie",
-      imageUrl: "/images/gallery/3.png",
+      id: 1,
+      name: "Professional Shot",
+      imageUrl: "/images/gallery/1.png",
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      id: 4,
-      name: "Gaming Setup",
-      imageUrl: "/images/gallery/4.png",
-      className: "md:col-span-1 md:row-span-1",
+      id: 9,
+      name: "GYM Asthetics",
+      imageUrl: "/images/gallery/1.jpeg",
+      className: "md:col-span-2 md:row-span-1",
     },
     {
       id: 7,
-      name: "In the Eyes",
+      name: "Mirror Selfie",
       imageUrl: "/images/gallery/7.jpeg",
       className: "md:col-span-1 md:row-span-1",
     },
     {
       id: 6,
-      name: "Sunset Vibez",
-      imageUrl: "/images/gallery/8.jpeg",
+      name: "Gaming Zone",
+      imageUrl: "/images/gallery/6.png",
       className: "md:col-span-2 md:row-span-1",
     },
     {
       id: 8,
       name: "Random Shoots",
-      imageUrl: "/images/gallery/6.jpg",
+      imageUrl: "/images/gallery/8.jpeg",
       className: "md:col-span-2 md:row-span-1",
     },
     {

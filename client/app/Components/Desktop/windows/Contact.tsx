@@ -163,7 +163,7 @@ const Contact = () => {
             <div className="relative w-24 h-24 md:w-32 md:h-32 shrink-0">
               <div className="absolute inset-0 rounded-full bg-linear-to-br from-blue-500 to-purple-500 blur-lg opacity-50 animate-pulse"></div>
               <Image
-                src="/images/gallery/3.png"
+                src="/images/dev1.png"
                 alt="Profile"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
