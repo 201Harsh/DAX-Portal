@@ -235,7 +235,7 @@ const ABOUT_LOCATION: any = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/dev.jpg",
+      imageUrl: "/images/dev1.png",
     },
     {
       id: 2,
@@ -253,7 +253,7 @@ const ABOUT_LOCATION: any = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/gallery/4.png",
+      imageUrl: "/images/gallery/6.png",
     },
     {
       id: 4,
