@@ -101,9 +101,9 @@ const contactLinks = [
   {
     id: "phone",
     name: "Phone",
-    value: "+91 9411378054",
+    value: "+91 ------",
     icon: FiPhone,
-    href: "tel:+91 9411378054",
+    href: "tel:+91 ------",
     className:
       "col-span-2 row-span-1 bg-gray-800 border border-white/10 text-gray-300",
   },

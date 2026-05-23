@@ -49,9 +49,9 @@ const MobileContact = () => {
     {
       id: "phone",
       name: "Call Me",
-      value: "+91 9411378054",
+      value: "+91 ------",
       icon: FiPhone,
-      href: "tel:+919411378054",
+      href: "tel:+------",
       className:
         "col-span-2 bg-gradient-to-r from-blue-900/80 to-blue-600/20 border-blue-500/30 text-blue-100",
       accent: "text-blue-400",
