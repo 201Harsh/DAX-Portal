@@ -263,4 +263,6 @@ It is a **system you access**.
 
 > _Access Granted._
 
-# Made with ❤️ by Harsh Pandey
+---
+
+# Made with ❤️ by [Harsh](https://instagram.com/201Harshs)
