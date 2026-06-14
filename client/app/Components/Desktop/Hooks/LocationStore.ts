@@ -166,58 +166,6 @@ const WORK_LOCATION: any = {
         },
       ],
     },
-    // ▶ Project 4
-    {
-      id: 8,
-      name: "RaktFlow",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-52 left-20",
-      windowPosition: "top-[45vh] left-7",
-      children: [
-        {
-          id: 1,
-          name: "RaktFlow.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "RaktFlow is a real-time, private 1v1 chat application focused on speed, privacy, and minimal UI.",
-            "Users can securely register, search for other users, and initiate private conversations instantly.",
-            "It supports real-time messaging with WebSockets, authentication, and session-based access control.",
-            "Built using the MERN stack, RaktFlow is designed as a scalable foundation for modern chat systems.",
-          ],
-        },
-        {
-          id: 2,
-          name: "raktflow.app",
-          icon: "/images/daxb.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://raktflow.vercel.app",
-          position: "top-10 right-20",
-        },
-        {
-          id: 4,
-          name: "raktflow.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/rakt.png",
-        },
-        {
-          id: 5,
-          name: "SourceCode.git",
-          icon: "/images/gitCode.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://github.com/201Harsh/RaktFlow",
-          position: "top-60 right-20",
-        },
-      ],
-    },
   ],
 };
 
