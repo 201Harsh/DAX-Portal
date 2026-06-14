@@ -11,7 +11,7 @@ const WORK_LOCATION: any = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Cobra AI 2.0",
+      name: "IRIS AI",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5",
@@ -19,35 +19,35 @@ const WORK_LOCATION: any = {
       children: [
         {
           id: 1,
-          name: "Cobra AI 2.0.txt",
+          name: "IRIS AI.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Cobra AI 2.0 is an AI-powered web platform that allows non-coders to create full-stack websites using natural language.",
-            "Users describe what they want, and the system generates, previews, and deploys production-ready applications.",
-            "It features real-time collaborative coding, AI error detection, live previews, and automated deployment.",
-            "Built using the MERN stack with advanced AI agent orchestration for a startup-level experience.",
+            "IRIS AI is an autonomous neural operating system designed to execute real-world tasks through intelligent agents and system tooling.",
+            "It combines natural language understanding, memory systems, MCP integrations, web intelligence, and workflow automation into a unified AI runtime.",
+            "Built as a local-first platform, IRIS can search, reason, execute actions, manage context, and assist developers through a powerful agent architecture.",
+            "Designed as an open-source AI OS focused on execution, privacy, extensibility, and real-world productivity.",
           ],
         },
         {
           id: 2,
-          name: "cobra-ai.live",
+          name: "iris-ai.system",
           icon: "/images/daxb.png",
           kind: "file",
           fileType: "url",
-          href: "https://cobra-aing.vercel.app",
+          href: "https://irisaiw.vercel.app/",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "cobra-ai.png",
+          name: "iris-ai.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/cobra.png",
+          imageUrl: "/images/iris-ai.png",
         },
         {
           id: 5,
@@ -55,7 +55,7 @@ const WORK_LOCATION: any = {
           icon: "/images/gitCode.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/201Harsh/Cobra-AI-2.0",
+          href: "https://github.com/IRISX-AI/IRIS-AI",
           position: "top-60 right-20",
         },
       ],
@@ -344,7 +344,7 @@ const useLocationStore = create(
         state.activeLocation = DEFAULT_LOCATION;
       });
     },
-  }))
+  })),
 );
 
 export default useLocationStore;
