@@ -164,7 +164,6 @@ const NotFound = () => {
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Main Window Frame (Mac + Windows Hybrid) */}
       <div className="window-frame relative z-10 flex items-center justify-center min-h-screen p-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -172,10 +171,8 @@ const NotFound = () => {
           transition={{ duration: 0.5 }}
           className="relative w-full max-w-2xl"
         >
-          {/* Window Title Bar (Mac-style controls + Windows-style title) */}
           <div className="title-bar flex items-center justify-between bg-neutral-900 border border-red-900/50 rounded-t-lg px-4 py-3 backdrop-blur-sm">
             <div className="flex items-center gap-2">
-              {/* Mac OS Window Controls */}
               <div className="window-control w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 cursor-pointer transition-colors shadow-[0_0_8px_rgba(239,68,68,0.5)]" />
               <div className="window-control w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-colors shadow-[0_0_8px_rgba(234,179,8,0.5)]" />
               <div className="window-control w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 cursor-pointer transition-colors shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
@@ -188,7 +185,6 @@ const NotFound = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              {/* Windows-style window controls */}
               <div className="w-4 h-4 flex items-center justify-center text-red-500/50 hover:text-red-400 cursor-pointer">
                 <svg
                   width="12"
@@ -229,15 +225,12 @@ const NotFound = () => {
             </div>
           </div>
 
-          {/* Main Content Area */}
           <div className="relative bg-black/80 border-x border-b border-red-900/50 rounded-b-lg p-8 sm:p-12 backdrop-blur-md overflow-hidden">
-            {/* Decorative Corner Accents */}
             <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-red-500" />
             <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-red-500" />
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-red-500" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-red-500" />
 
-            {/* Floating Particles */}
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}
@@ -249,7 +242,6 @@ const NotFound = () => {
               />
             ))}
 
-            {/* 404 Glitch Text */}
             <div
               ref={textRef}
               className="relative text-center mb-8"
@@ -275,7 +267,6 @@ const NotFound = () => {
                   404
                 </h1>
 
-                {/* Glitch Layers */}
                 <span className="absolute top-0 left-0 -ml-1 text-8xl sm:text-9xl font-black text-red-500/30 tracking-tighter animate-pulse">
                   404
                 </span>
@@ -294,7 +285,6 @@ const NotFound = () => {
               </motion.div>
             </div>
 
-            {/* Linux Terminal Style Output */}
             <div className="space-y-2 mb-8 font-mono text-sm sm:text-base">
               <div className="terminal-line overflow-hidden whitespace-nowrap">
                 <span className="text-green-500">user@nextjs</span>
@@ -326,7 +316,6 @@ const NotFound = () => {
               </div>
             </div>
 
-            {/* OS Hybrid Status Bar */}
             <div className="flex items-center justify-between mb-8 px-4 py-2 bg-neutral-900/80 rounded border border-red-900/30 text-xs font-mono">
               <div className="flex items-center gap-4 text-red-400/60">
                 <span className="flex items-center gap-1">
@@ -343,7 +332,6 @@ const NotFound = () => {
               </div>
             </div>
 
-            {/* Action Button */}
             <div className="flex justify-center">
               <motion.button
                 onClick={handleGoBack}
@@ -353,7 +341,6 @@ const NotFound = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {/* Button Background Animation */}
                 <motion.div
                   className="absolute inset-0 bg-red-600"
                   initial={{ x: "-100%" }}
@@ -383,7 +370,6 @@ const NotFound = () => {
                   </span>
                 </span>
 
-                {/* Corner Decorations */}
                 <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-red-500 group-hover:border-black transition-colors" />
                 <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-red-500 group-hover:border-black transition-colors" />
                 <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-red-500 group-hover:border-black transition-colors" />
@@ -391,7 +377,6 @@ const NotFound = () => {
               </motion.button>
             </div>
 
-            {/* Footer Hints */}
             <div className="mt-8 text-center text-xs text-red-500/40 font-mono space-y-1">
               <p>
                 Press{" "}
@@ -408,7 +393,6 @@ const NotFound = () => {
         </motion.div>
       </div>
 
-      {/* Edge Glow Effects */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600/50 to-transparent pointer-events-none" />
       <div className="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600/50 to-transparent pointer-events-none" />
     </div>
