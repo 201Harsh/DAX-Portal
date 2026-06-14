@@ -166,7 +166,6 @@ const WORK_LOCATION: any = {
       ],
     },
 
-    // ▶ Project 3
     {
       id: 7,
       name: "Varon AI",
