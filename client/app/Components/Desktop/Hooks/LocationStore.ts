@@ -114,6 +114,58 @@ const WORK_LOCATION: any = {
       ],
     },
 
+    {
+      id: 8,
+      name: "IRIS Zero",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-52 left-20",
+      windowPosition: "top-[45vh] left-7",
+      children: [
+        {
+          id: 1,
+          name: "IRIS Zero.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "IRIS Zero is a fully local-first AI terminal built for developers, privacy-focused users, and offline productivity.",
+            "It uses local AI models through Ollama, Whisper, and Kokoro to provide voice interaction, reasoning, and real command execution without cloud services.",
+            "Users can manage projects, automate workflows, control the filesystem, and execute terminal operations entirely on-device.",
+            "With zero APIs, zero telemetry, and zero subscriptions, IRIS Zero transforms the terminal into a private neural execution environment.",
+          ],
+        },
+        {
+          id: 2,
+          name: "iris-zero.system",
+          icon: "/images/daxb.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/201Harsh/IRIS-Zero",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "iris-zero.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/iris-zero.png",
+        },
+        {
+          id: 5,
+          name: "SourceCode.git",
+          icon: "/images/gitCode.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/201Harsh/IRIS-Zero",
+          position: "top-60 right-20",
+        },
+      ],
+    },
+
     // ▶ Project 3
     {
       id: 7,
