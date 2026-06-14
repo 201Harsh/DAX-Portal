@@ -13,7 +13,6 @@ const NotFound = () => {
   const [hoveredButton, setHoveredButton] = useState(false);
   const [glitchActive, setGlitchActive] = useState(false);
 
-  // Matrix-like digital rain effect (Linux terminal + Windows CMD vibe)
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -61,11 +60,9 @@ const NotFound = () => {
     };
   }, []);
 
-  // GSAP entrance animations
   useEffect(() => {
     const tl = gsap.timeline();
 
-    // Mac-style window controls animation
     tl.fromTo(
       ".window-control",
       { scale: 0, opacity: 0 },
@@ -78,7 +75,6 @@ const NotFound = () => {
       },
     );
 
-    // Windows-style title bar
     tl.fromTo(
       ".title-bar",
       { y: -50, opacity: 0 },
@@ -86,7 +82,6 @@ const NotFound = () => {
       "-=0.3",
     );
 
-    // Main 404 text with glitch effect
     tl.fromTo(
       ".glitch-text",
       { scale: 2, opacity: 0, filter: "blur(10px)" },
@@ -100,7 +95,6 @@ const NotFound = () => {
       "-=0.2",
     );
 
-    // Linux terminal style error message
     tl.fromTo(
       ".terminal-line",
       { width: 0, opacity: 0 },
@@ -114,7 +108,6 @@ const NotFound = () => {
       "-=0.4",
     );
 
-    // Neon glow pulse
     gsap.to(".neon-glow", {
       boxShadow:
         "0 0 30px rgba(255, 0, 51, 0.6), 0 0 60px rgba(255, 0, 51, 0.3)",
@@ -124,7 +117,6 @@ const NotFound = () => {
       ease: "sine.inOut",
     });
 
-    // Floating particles
     gsap.to(".particle", {
       y: "random(-20, 20)",
       x: "random(-10, 10)",
@@ -140,14 +132,12 @@ const NotFound = () => {
     });
   }, []);
 
-  // Glitch effect trigger
   const triggerGlitch = () => {
     setGlitchActive(true);
     setTimeout(() => setGlitchActive(false), 300);
   };
 
   const handleGoBack = () => {
-    // GSAP exit animation before routing
     const tl = gsap.timeline({
       onComplete: () => router.push("/"),
     });
@@ -165,16 +155,13 @@ const NotFound = () => {
       ref={containerRef}
       className="relative min-h-screen w-full bg-black overflow-hidden font-mono selection:bg-red-500 selection:text-black"
     >
-      {/* Matrix Digital Rain Background */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 opacity-20 pointer-events-none"
       />
 
-      {/* Scanline Overlay (CRT Monitor Effect - Linux/Retro vibe) */}
       <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,51,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]" />
 
-      {/* Ambient Red Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Window Frame (Mac + Windows Hybrid) */}
