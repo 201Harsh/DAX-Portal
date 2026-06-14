@@ -160,9 +160,9 @@ const NotFound = () => {
         className="absolute inset-0 opacity-20 pointer-events-none"
       />
 
-      <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,51,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]" />
+      <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-linear(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-linear(90deg,rgba(255,0,51,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-size-[100%_2px,3px_100%]" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-red-600/20 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="window-frame relative z-10 flex items-center justify-center min-h-screen p-4">
         <motion.div
@@ -263,7 +263,7 @@ const NotFound = () => {
                 }
                 transition={{ duration: 0.3 }}
               >
-                <h1 className="text-8xl sm:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-b from-red-400 via-red-600 to-red-900 tracking-tighter drop-shadow-[0_0_15px_rgba(255,0,51,0.5)]">
+                <h1 className="text-8xl sm:text-9xl font-black text-transparent bg-clip-text bg-linear-to-b from-red-400 via-red-600 to-red-900 tracking-tighter drop-shadow-[0_0_15px_rgba(255,0,51,0.5)]">
                   404
                 </h1>
 
@@ -393,8 +393,8 @@ const NotFound = () => {
         </motion.div>
       </div>
 
-      <div className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600/50 to-transparent pointer-events-none" />
-      <div className="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600/50 to-transparent pointer-events-none" />
+      <div className="fixed top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-red-600/50 to-transparent pointer-events-none" />
+      <div className="fixed bottom-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-red-600/50 to-transparent pointer-events-none" />
     </div>
   );
 };
