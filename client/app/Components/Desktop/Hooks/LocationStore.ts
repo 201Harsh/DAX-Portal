@@ -142,7 +142,7 @@ const WORK_LOCATION: any = {
           icon: "/images/daxb.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/201Harsh/IRIS-Zero",
+          href: "https://github.com/IRISX-AI/IRIS-Zero",
           position: "top-10 right-20",
         },
         {
@@ -160,7 +160,7 @@ const WORK_LOCATION: any = {
           icon: "/images/gitCode.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/201Harsh/IRIS-Zero",
+          href: "https://github.com/IRISX-AI/IRIS-Zero",
           position: "top-60 right-20",
         },
       ],
