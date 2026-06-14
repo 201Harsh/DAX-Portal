@@ -8,7 +8,6 @@ const WORK_LOCATION: any = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1
     {
       id: 5,
       name: "IRIS AI",
@@ -61,7 +60,6 @@ const WORK_LOCATION: any = {
       ],
     },
 
-    // ▶ Project 2
     {
       id: 6,
       name: "IRIS Mini",
